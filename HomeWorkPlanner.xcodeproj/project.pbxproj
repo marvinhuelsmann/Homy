@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B1BE04425DDBD8500F26CBA /* HomeWork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04225DDBD8500F26CBA /* HomeWork.xcdatamodeld */; };
+		4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
+		4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
+		4B3B1CA825CF5C2000E01BFE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */; };
+		4B3B1CAA25CF5C2000E01BFE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA925CF5C2000E01BFE /* SwiftUI.framework */; };
+		4B3B1CAD25CF5C2000E01BFE /* WorkWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAC25CF5C2000E01BFE /* WorkWidget.swift */; };
+		4B3B1CB025CF5C2100E01BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAF25CF5C2100E01BFE /* Assets.xcassets */; };
+		4B3B1CB225CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */; };
+		4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */; };
+		4B3B1CB625CF5C2100E01BFE /* WorkWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4B6508F725AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */; };
+		4B6508F825AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */; };
+		4B6508F925AF31A400FEA20A /* WorkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6508E525AF31A300FEA20A /* WorkListView.swift */; };
+		4B6508FA25AF31A400FEA20A /* WorkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6508E525AF31A300FEA20A /* WorkListView.swift */; };
+		4B6508FB25AF31A400FEA20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6508E625AF31A400FEA20A /* Assets.xcassets */; };
+		4B6508FC25AF31A400FEA20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6508E625AF31A400FEA20A /* Assets.xcassets */; };
+		4B65090F25AF324500FEA20A /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65090E25AF324500FEA20A /* Subjects.swift */; };
+		4BDE378E25AF3EF800158395 /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65090E25AF324500FEA20A /* Subjects.swift */; };
+		4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */; };
+		4BEDFB5F25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */; };
+		4BFE4AE725AF3797009E0126 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */; };
+		4BFE4AE825AF3797009E0126 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B3B1CB425CF5C2100E01BFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B6508DF25AF31A200FEA20A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B3B1CA425CF5C2000E01BFE;
+			remoteInfo = WorkWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B3B1CBA25CF5C2100E01BFE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4B3B1CB625CF5C2100E01BFE /* WorkWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4B1BE04325DDBD8500F26CBA /* HomeWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork.xcdatamodel; sourceTree = "<group>"; };
+		4B1BE04B25DDC04A00F26CBA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorkWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4B3B1CA925CF5C2000E01BFE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4B3B1CAC25CF5C2000E01BFE /* WorkWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWidget.swift; sourceTree = "<group>"; };
+		4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WorkWidget.intentdefinition; sourceTree = "<group>"; };
+		4B3B1CAF25CF5C2100E01BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B3B1CB125CF5C2100E01BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkPlannerApp.swift; sourceTree = "<group>"; };
+		4B6508E525AF31A300FEA20A /* WorkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView.swift; sourceTree = "<group>"; };
+		4B6508E625AF31A400FEA20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B6508EB25AF31A400FEA20A /* HomeWorkPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B6508EE25AF31A400FEA20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B6508F325AF31A400FEA20A /* HomeWorkPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B6508F525AF31A400FEA20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B6508F625AF31A400FEA20A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		4B65090E25AF324500FEA20A /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
+		4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeWorkView.swift; sourceTree = "<group>"; };
+		4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B3B1CA225CF5C2000E01BFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3B1CAA25CF5C2000E01BFE /* SwiftUI.framework in Frameworks */,
+				4B3B1CA825CF5C2000E01BFE /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B6508E825AF31A400FEA20A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B6508F025AF31A400FEA20A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B3B1CA625CF5C2000E01BFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */,
+				4B3B1CA925CF5C2000E01BFE /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B3B1CAB25CF5C2000E01BFE /* WorkWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4B3B1CAC25CF5C2000E01BFE /* WorkWidget.swift */,
+				4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */,
+				4B3B1CAF25CF5C2100E01BFE /* Assets.xcassets */,
+				4B3B1CB125CF5C2100E01BFE /* Info.plist */,
+			);
+			path = WorkWidget;
+			sourceTree = "<group>";
+		};
+		4B6508DE25AF31A200FEA20A = {
+			isa = PBXGroup;
+			children = (
+				4B6508E325AF31A300FEA20A /* Shared */,
+				4B6508ED25AF31A400FEA20A /* iOS */,
+				4B6508F425AF31A400FEA20A /* macOS */,
+				4B3B1CAB25CF5C2000E01BFE /* WorkWidget */,
+				4B3B1CA625CF5C2000E01BFE /* Frameworks */,
+				4B6508EC25AF31A400FEA20A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B6508E325AF31A300FEA20A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */,
+				4BDE378D25AF3EED00158395 /* Meta */,
+				4B6508E525AF31A300FEA20A /* WorkListView.swift */,
+				4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */,
+				4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */,
+				4B6508E625AF31A400FEA20A /* Assets.xcassets */,
+				4B1BE04225DDBD8500F26CBA /* HomeWork.xcdatamodeld */,
+				4B1BE04B25DDC04A00F26CBA /* Persistence.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4B6508EC25AF31A400FEA20A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B6508EB25AF31A400FEA20A /* HomeWorkPlanner.app */,
+				4B6508F325AF31A400FEA20A /* HomeWorkPlanner.app */,
+				4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B6508ED25AF31A400FEA20A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B6508EE25AF31A400FEA20A /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		4B6508F425AF31A400FEA20A /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B6508F525AF31A400FEA20A /* Info.plist */,
+				4B6508F625AF31A400FEA20A /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		4BDE378D25AF3EED00158395 /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				4B65090E25AF324500FEA20A /* Subjects.swift */,
+			);
+			path = Meta;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B3B1CA425CF5C2000E01BFE /* WorkWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B3B1CB725CF5C2100E01BFE /* Build configuration list for PBXNativeTarget "WorkWidgetExtension" */;
+			buildPhases = (
+				4B3B1CA125CF5C2000E01BFE /* Sources */,
+				4B3B1CA225CF5C2000E01BFE /* Frameworks */,
+				4B3B1CA325CF5C2000E01BFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkWidgetExtension;
+			productName = WorkWidgetExtension;
+			productReference = 4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		4B6508EA25AF31A400FEA20A /* HomeWorkPlanner (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B6508FF25AF31A400FEA20A /* Build configuration list for PBXNativeTarget "HomeWorkPlanner (iOS)" */;
+			buildPhases = (
+				4B6508E725AF31A400FEA20A /* Sources */,
+				4B6508E825AF31A400FEA20A /* Frameworks */,
+				4B6508E925AF31A400FEA20A /* Resources */,
+				4B3B1CBA25CF5C2100E01BFE /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B3B1CB525CF5C2100E01BFE /* PBXTargetDependency */,
+			);
+			name = "HomeWorkPlanner (iOS)";
+			productName = "HomeWorkPlanner (iOS)";
+			productReference = 4B6508EB25AF31A400FEA20A /* HomeWorkPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B6508F225AF31A400FEA20A /* HomeWorkPlanner (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B65090225AF31A400FEA20A /* Build configuration list for PBXNativeTarget "HomeWorkPlanner (macOS)" */;
+			buildPhases = (
+				4B6508EF25AF31A400FEA20A /* Sources */,
+				4B6508F025AF31A400FEA20A /* Frameworks */,
+				4B6508F125AF31A400FEA20A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HomeWorkPlanner (macOS)";
+			productName = "HomeWorkPlanner (macOS)";
+			productReference = 4B6508F325AF31A400FEA20A /* HomeWorkPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B6508DF25AF31A200FEA20A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					4B3B1CA425CF5C2000E01BFE = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					4B6508EA25AF31A400FEA20A = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					4B6508F225AF31A400FEA20A = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 4B6508E225AF31A200FEA20A /* Build configuration list for PBXProject "HomeWorkPlanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B6508DE25AF31A200FEA20A;
+			productRefGroup = 4B6508EC25AF31A400FEA20A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B6508EA25AF31A400FEA20A /* HomeWorkPlanner (iOS) */,
+				4B6508F225AF31A400FEA20A /* HomeWorkPlanner (macOS) */,
+				4B3B1CA425CF5C2000E01BFE /* WorkWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B3B1CA325CF5C2000E01BFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3B1CB025CF5C2100E01BFE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B6508E925AF31A400FEA20A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6508FB25AF31A400FEA20A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B6508F125AF31A400FEA20A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6508FC25AF31A400FEA20A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B3B1CA125CF5C2000E01BFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3B1CAD25CF5C2000E01BFE /* WorkWidget.swift in Sources */,
+				4B3B1CB225CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B6508E725AF31A400FEA20A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B65090F25AF324500FEA20A /* Subjects.swift in Sources */,
+				4B1BE04425DDBD8500F26CBA /* HomeWork.xcdatamodeld in Sources */,
+				4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
+				4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */,
+				4B6508F925AF31A400FEA20A /* WorkListView.swift in Sources */,
+				4BFE4AE725AF3797009E0126 /* WorkDetailView.swift in Sources */,
+				4B6508F725AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
+				4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B6508EF25AF31A400FEA20A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6508FA25AF31A400FEA20A /* WorkListView.swift in Sources */,
+				4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */,
+				4BEDFB5F25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
+				4BFE4AE825AF3797009E0126 /* WorkDetailView.swift in Sources */,
+				4B6508F825AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
+				4BDE378E25AF3EF800158395 /* Subjects.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B3B1CB525CF5C2100E01BFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B3B1CA425CF5C2000E01BFE /* WorkWidgetExtension */;
+			targetProxy = 4B3B1CB425CF5C2100E01BFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4B3B1CB825CF5C2100E01BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQA322H87A;
+				INFOPLIST_FILE = WorkWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner.WorkWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B3B1CB925CF5C2100E01BFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQA322H87A;
+				INFOPLIST_FILE = WorkWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner.WorkWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B6508FD25AF31A400FEA20A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B6508FE25AF31A400FEA20A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4B65090025AF31A400FEA20A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQA322H87A;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner;
+				PRODUCT_NAME = HomeWorkPlanner;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B65090125AF31A400FEA20A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQA322H87A;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner;
+				PRODUCT_NAME = HomeWorkPlanner;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B65090325AF31A400FEA20A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TQA322H87A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner;
+				PRODUCT_NAME = HomeWorkPlanner;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4B65090425AF31A400FEA20A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TQA322H87A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner;
+				PRODUCT_NAME = HomeWorkPlanner;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B3B1CB725CF5C2100E01BFE /* Build configuration list for PBXNativeTarget "WorkWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B3B1CB825CF5C2100E01BFE /* Debug */,
+				4B3B1CB925CF5C2100E01BFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B6508E225AF31A200FEA20A /* Build configuration list for PBXProject "HomeWorkPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B6508FD25AF31A400FEA20A /* Debug */,
+				4B6508FE25AF31A400FEA20A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B6508FF25AF31A400FEA20A /* Build configuration list for PBXNativeTarget "HomeWorkPlanner (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B65090025AF31A400FEA20A /* Debug */,
+				4B65090125AF31A400FEA20A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B65090225AF31A400FEA20A /* Build configuration list for PBXNativeTarget "HomeWorkPlanner (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B65090325AF31A400FEA20A /* Debug */,
+				4B65090425AF31A400FEA20A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4B1BE04225DDBD8500F26CBA /* HomeWork.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4B1BE04325DDBD8500F26CBA /* HomeWork.xcdatamodel */,
+			);
+			currentVersion = 4B1BE04325DDBD8500F26CBA /* HomeWork.xcdatamodel */;
+			path = HomeWork.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4B6508DF25AF31A200FEA20A /* Project object */;
+}
