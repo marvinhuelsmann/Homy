@@ -22,7 +22,9 @@ enum Subjects: String, CaseIterable {
     case HOMEBUSINESS = "Hauswirtschaft"
     case FRANCE = "Französich"
     case SPANISH = "Spanisch"
+    case CREATE = "Kunst"
     case HISTORY = "Geschichte"
+    case GEOGRAPHIE = "Geographie"
     
 
 }

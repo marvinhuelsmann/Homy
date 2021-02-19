@@ -24,7 +24,7 @@ struct AddHomeWorkView: View {
     
     @State private var fillInAll: Bool = true
     
-    private var choose = [Subjects.ENGLISH.rawValue, Subjects.GERMAN.rawValue, Subjects.PHYSIK.rawValue, Subjects.BIOLOGIE.rawValue, Subjects.LATAIN.rawValue, Subjects.RELIGION.rawValue, Subjects.SPANISH.rawValue, Subjects.HOMEBUSINESS.rawValue, Subjects.FRANCE.rawValue, Subjects.INFORMATIK.rawValue, Subjects.CHEMIE.rawValue, Subjects.HISTORY.rawValue, Subjects.MATH.rawValue, Subjects.SOCIAL.rawValue]
+    private var choose = [Subjects.ENGLISH.rawValue, Subjects.GERMAN.rawValue, Subjects.PHYSIK.rawValue, Subjects.BIOLOGIE.rawValue, Subjects.LATAIN.rawValue, Subjects.RELIGION.rawValue, Subjects.SPANISH.rawValue, Subjects.HOMEBUSINESS.rawValue, Subjects.FRANCE.rawValue, Subjects.INFORMATIK.rawValue, Subjects.CHEMIE.rawValue, Subjects.HISTORY.rawValue, Subjects.MATH.rawValue, Subjects.SOCIAL.rawValue, Subjects.CREATE.rawValue, Subjects.GEOGRAPHIE.rawValue]
     
     var body: some View {
         
