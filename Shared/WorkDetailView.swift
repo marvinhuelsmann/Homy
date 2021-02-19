@@ -37,11 +37,9 @@ struct WorkDetailView: View {
                         Text(homework.name ?? "Undefined")
                         
                         Spacer()
-                        
                     }
                 }
                 .padding(.top, 50)
-                
                 
                 if homework.notice != "" {
                     VStack {
@@ -124,7 +122,6 @@ struct WorkDetailView: View {
                 return "Abgelaufen"
             }
         }
-        
         
         if calender.isDateInToday(homework.timeEnd ?? Date()) {
             return "Heute fällig"

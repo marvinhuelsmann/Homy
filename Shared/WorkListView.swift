@@ -59,7 +59,6 @@ struct WorkListView: View {
         }
     }
     
-    
     private func saveContext() {
         do {
             try viewContext.save()
