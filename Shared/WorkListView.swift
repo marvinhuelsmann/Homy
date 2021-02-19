@@ -10,7 +10,7 @@ import SwiftUI
 struct WorkListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \HomeWorkCoreData.timeStart, ascending: true) ])
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \HomeWorkCoreData.timeEnd, ascending: true) ])
     private var homeworks: FetchedResults<HomeWorkCoreData>
     
     @State private var isEditing = false
@@ -98,7 +98,7 @@ struct HomeWorkDetail: View {
             VStack(alignment: .leading) {
                 Text(homework.name ?? "Undefined")
             
-                Text("\(getSubjectname(sub: getSubject(sub: homework.subject ?? "Undefined"))), \(checkTime(date: homework.timeStart ?? Date())) (\(checkDateStart())) bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateEnd()))")
+                Text("\(getSubjectname(sub: getSubject(sub: homework.subject ?? "Undefined"))) bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateEnd()))")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 
@@ -115,23 +115,7 @@ struct HomeWorkDetail: View {
         let dateString = formatter.string(from: date)
         return dateString
     }
-    
-    func checkDateStart() -> String {
-        let calender = Calendar.current
-    
-        
-        if calender.isDateInToday(homework.timeStart ?? Date()) {
-            return "Heute"
-        } else if calender.isDateInTomorrow(homework.timeStart ?? Date()) {
-            return "Morgen"
-        } else if calender.isDateInWeekend(homework.timeStart ?? Date()) {
-            return "In dieser Woche"
-        } else if calender.isDateInYesterday(homework.timeStart ?? Date()) {
-            return "Gestern"
-        } else {
-            return "Früher"
-        }
-    }
+
     
     func checkDateEnd() -> String {
         let calender = Calendar.current

@@ -16,9 +16,9 @@ struct AddHomeWorkView: View {
     private var movies: FetchedResults<HomeWorkCoreData>
     
     @State private var name: String = ""
-    @State private var timeStart = Date()
     @State private var timeEnd = Date().addingTimeInterval(1200)
     @State private var subject: String = ""
+    @State private var link: String = ""
     
     @State private var notice: String = ""
     
@@ -42,12 +42,15 @@ struct AddHomeWorkView: View {
                     }
                 }
                 
+                Section(header: Text("Link")) {
+                    TextField("Schulwebsite Link", text: $link)
+                }
+                
                 Section(header: Text("Notiz")) {
                     TextEditor(text: $notice)
                 }
                 
                 Section(header: Text("Zeit")) {
-                    DatePicker("Ab wann?", selection: $timeStart)
                     DatePicker("Bis wann?", selection: $timeEnd)
                 }
                 
@@ -98,7 +101,7 @@ struct AddHomeWorkView: View {
         newHomeWork.notice = self.notice
         
         newHomeWork.timeEnd = self.timeEnd
-        newHomeWork.timeStart = self.timeStart
+        newHomeWork.link  = self.link
         
         saveContext()
     }

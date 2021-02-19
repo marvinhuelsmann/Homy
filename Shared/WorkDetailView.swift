@@ -20,7 +20,7 @@ struct WorkDetailView: View {
                         .bold()
                         .padding(.top)
                     
-                    Text("\(checkDate()) von \(checkTime(date: homework.timeStart ?? Date())) (\(checkDateName(date: homework.timeStart ?? Date()))) bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateName(date: homework.timeEnd ?? Date())))")
+                    Text("\(checkDate()) bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateName(date: homework.timeEnd ?? Date())))")
                         .foregroundColor(.secondary)
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
