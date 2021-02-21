@@ -14,7 +14,7 @@ struct HomeWorkPlannerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            WorkListView()
+            TabItemView()
                 .environment(\.managedObjectContext, persistenceContainer.container.viewContext)
         }
     }

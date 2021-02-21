@@ -21,18 +21,15 @@ struct AddHomeWorkView: View {
     @State private var link: String = ""
     
     @State private var notice: String = ""
-    
     @State private var fillInAll: Bool = true
     
-    private var choose = [Subjects.ENGLISH.rawValue, Subjects.GERMAN.rawValue, Subjects.PHYSIK.rawValue, Subjects.BIOLOGIE.rawValue, Subjects.LATAIN.rawValue, Subjects.RELIGION.rawValue, Subjects.SPANISH.rawValue, Subjects.HOMEBUSINESS.rawValue, Subjects.FRANCE.rawValue, Subjects.INFORMATIK.rawValue, Subjects.CHEMIE.rawValue, Subjects.HISTORY.rawValue, Subjects.MATH.rawValue, Subjects.SOCIAL.rawValue, Subjects.CREATE.rawValue, Subjects.GEOGRAPHIE.rawValue]
+    private var choose = [Subjects.ENGLISH.rawValue, Subjects.GERMAN.rawValue, Subjects.MATH.rawValue, Subjects.PHYSIK.rawValue, Subjects.BIOLOGIE.rawValue, Subjects.LATAIN.rawValue, Subjects.RELIGION.rawValue, Subjects.SPANISH.rawValue, Subjects.HOMEBUSINESS.rawValue, Subjects.FRANCE.rawValue, Subjects.INFORMATIK.rawValue, Subjects.CHEMIE.rawValue, Subjects.HISTORY.rawValue, Subjects.SOCIAL.rawValue, Subjects.CREATE.rawValue, Subjects.GEOGRAPHIE.rawValue]
     
     var body: some View {
         
-        
         VStack {
             Form {
-                
-                Section(header: Text("Aufgabe")) {
+                Section(header: Text("Aufgabe*")) {
                     TextField("Arbeitsblatt 4", text: $name)
                     
                     Picker(selection: $subject, label: Text("Fach")) {
@@ -50,13 +47,12 @@ struct AddHomeWorkView: View {
                     TextEditor(text: $notice)
                 }
                 
-                Section(header: Text("Zeit")) {
+                Section(header: Text("Zeit*")) {
                     DatePicker("Bis wann?", selection: $timeEnd)
                 }
                 
                 HStack(alignment: .center) {
                     Spacer()
-                    
                     Button("Hausaufgabe hinzufügen") {
                         if name != "" && subject != "" {
                             makeHomeWork()
@@ -68,8 +64,6 @@ struct AddHomeWorkView: View {
                         let generator = UISelectionFeedbackGenerator()
                         generator.selectionChanged()
                     }
-        
-                    
                     Spacer()
                 }
                 .padding()
@@ -77,10 +71,19 @@ struct AddHomeWorkView: View {
                 .cornerRadius(5)
                 .shadow(radius: 10)
                 .padding()
+                
+                if !fillInAll {
+                    HStack {
+                        Spacer()
+                        Text("Es wurden nicht alle benötigten Sternchen (*) Felder ausgefüllt!")
+                            .multilineTextAlignment(.center)
+                        Spacer()
+                    }
+                }
             }
-            
         }
-        .navigationTitle("Heute hinzufügen")
+        
+        .navigationTitle("Hinzufügen")
     }
     
     private func saveContext() {
@@ -91,8 +94,6 @@ struct AddHomeWorkView: View {
             fatalError("Unresolved Error: \(error)")
         }
     }
-
-
     
     func makeHomeWork() {
         let newHomeWork = HomeWorkCoreData(context: viewContext)
@@ -105,7 +106,6 @@ struct AddHomeWorkView: View {
         
         saveContext()
     }
-    
 }
 
 struct AddHomeWorkView_Previews: PreviewProvider {

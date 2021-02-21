@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0A47B325E1D845008B7431 /* LongTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A47B225E1D845008B7431 /* LongTextView.swift */; };
+		4B0A47B425E1D845008B7431 /* LongTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A47B225E1D845008B7431 /* LongTextView.swift */; };
 		4B1BE04425DDBD8500F26CBA /* HomeWork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04225DDBD8500F26CBA /* HomeWork.xcdatamodeld */; };
 		4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
@@ -17,6 +19,14 @@
 		4B3B1CB225CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */; };
 		4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */; };
 		4B3B1CB625CF5C2100E01BFE /* WorkWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4B3B47F425E1AAB100741B6B /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47F325E1AAB100741B6B /* TabItemView.swift */; };
+		4B3B47F525E1AAB100741B6B /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47F325E1AAB100741B6B /* TabItemView.swift */; };
+		4B3B47FD25E1AE3900741B6B /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47FC25E1AE3900741B6B /* NewsView.swift */; };
+		4B3B47FE25E1AE3900741B6B /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47FC25E1AE3900741B6B /* NewsView.swift */; };
+		4B3B480625E1B4EB00741B6B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B480525E1B4EB00741B6B /* CardView.swift */; };
+		4B3B480725E1B4EB00741B6B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B480525E1B4EB00741B6B /* CardView.swift */; };
+		4B3B481525E1C45A00741B6B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B481425E1C45A00741B6B /* SettingsView.swift */; };
+		4B3B481625E1C45A00741B6B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B481425E1C45A00741B6B /* SettingsView.swift */; };
 		4B6508F725AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */; };
 		4B6508F825AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */; };
 		4B6508F925AF31A400FEA20A /* WorkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6508E525AF31A300FEA20A /* WorkListView.swift */; };
@@ -24,6 +34,8 @@
 		4B6508FB25AF31A400FEA20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6508E625AF31A400FEA20A /* Assets.xcassets */; };
 		4B6508FC25AF31A400FEA20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6508E625AF31A400FEA20A /* Assets.xcassets */; };
 		4B65090F25AF324500FEA20A /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65090E25AF324500FEA20A /* Subjects.swift */; };
+		4BB74A2B25E1C8FF00905918 /* LearnGoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB74A2A25E1C8FF00905918 /* LearnGoodView.swift */; };
+		4BB74A3325E1C91500905918 /* LearnPerfomanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB74A3225E1C91500905918 /* LearnPerfomanceView.swift */; };
 		4BDE378E25AF3EF800158395 /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65090E25AF324500FEA20A /* Subjects.swift */; };
 		4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */; };
 		4BEDFB5F25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */; };
@@ -56,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B0A47B225E1D845008B7431 /* LongTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextView.swift; sourceTree = "<group>"; };
 		4B1BE04325DDBD8500F26CBA /* HomeWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork.xcdatamodel; sourceTree = "<group>"; };
 		4B1BE04B25DDC04A00F26CBA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorkWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +78,10 @@
 		4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WorkWidget.intentdefinition; sourceTree = "<group>"; };
 		4B3B1CAF25CF5C2100E01BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3B1CB125CF5C2100E01BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B3B47F325E1AAB100741B6B /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		4B3B47FC25E1AE3900741B6B /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		4B3B480525E1B4EB00741B6B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		4B3B481425E1C45A00741B6B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkPlannerApp.swift; sourceTree = "<group>"; };
 		4B6508E525AF31A300FEA20A /* WorkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView.swift; sourceTree = "<group>"; };
 		4B6508E625AF31A400FEA20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +91,8 @@
 		4B6508F525AF31A400FEA20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B6508F625AF31A400FEA20A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		4B65090E25AF324500FEA20A /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
+		4BB74A2A25E1C8FF00905918 /* LearnGoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnGoodView.swift; sourceTree = "<group>"; };
+		4BB74A3225E1C91500905918 /* LearnPerfomanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnPerfomanceView.swift; sourceTree = "<group>"; };
 		4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeWorkView.swift; sourceTree = "<group>"; };
 		4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +162,8 @@
 				4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */,
 				4BDE378D25AF3EED00158395 /* Meta */,
 				4B6508E525AF31A300FEA20A /* WorkListView.swift */,
+				4B3B47FC25E1AE3900741B6B /* NewsView.swift */,
+				4B3B481425E1C45A00741B6B /* SettingsView.swift */,
 				4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */,
 				4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */,
 				4B6508E625AF31A400FEA20A /* Assets.xcassets */,
@@ -179,10 +200,23 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		4BB74A2925E1C8E400905918 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				4BB74A2A25E1C8FF00905918 /* LearnGoodView.swift */,
+				4BB74A3225E1C91500905918 /* LearnPerfomanceView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		4BDE378D25AF3EED00158395 /* Meta */ = {
 			isa = PBXGroup;
 			children = (
 				4B65090E25AF324500FEA20A /* Subjects.swift */,
+				4B3B47F325E1AAB100741B6B /* TabItemView.swift */,
+				4B3B480525E1B4EB00741B6B /* CardView.swift */,
+				4B0A47B225E1D845008B7431 /* LongTextView.swift */,
+				4BB74A2925E1C8E400905918 /* News */,
 			);
 			path = Meta;
 			sourceTree = "<group>";
@@ -327,11 +361,18 @@
 				4B65090F25AF324500FEA20A /* Subjects.swift in Sources */,
 				4B1BE04425DDBD8500F26CBA /* HomeWork.xcdatamodeld in Sources */,
 				4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
+				4B3B47FD25E1AE3900741B6B /* NewsView.swift in Sources */,
 				4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */,
 				4B6508F925AF31A400FEA20A /* WorkListView.swift in Sources */,
 				4BFE4AE725AF3797009E0126 /* WorkDetailView.swift in Sources */,
 				4B6508F725AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
+				4B3B47F425E1AAB100741B6B /* TabItemView.swift in Sources */,
+				4BB74A2B25E1C8FF00905918 /* LearnGoodView.swift in Sources */,
+				4B3B481525E1C45A00741B6B /* SettingsView.swift in Sources */,
+				4BB74A3325E1C91500905918 /* LearnPerfomanceView.swift in Sources */,
+				4B3B480625E1B4EB00741B6B /* CardView.swift in Sources */,
 				4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */,
+				4B0A47B325E1D845008B7431 /* LongTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +381,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B6508FA25AF31A400FEA20A /* WorkListView.swift in Sources */,
+				4B3B480725E1B4EB00741B6B /* CardView.swift in Sources */,
+				4B0A47B425E1D845008B7431 /* LongTextView.swift in Sources */,
+				4B3B47FE25E1AE3900741B6B /* NewsView.swift in Sources */,
 				4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */,
 				4BEDFB5F25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
+				4B3B481625E1C45A00741B6B /* SettingsView.swift in Sources */,
 				4BFE4AE825AF3797009E0126 /* WorkDetailView.swift in Sources */,
+				4B3B47F525E1AAB100741B6B /* TabItemView.swift in Sources */,
 				4B6508F825AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
 				4BDE378E25AF3EF800158395 /* Subjects.swift in Sources */,
 			);

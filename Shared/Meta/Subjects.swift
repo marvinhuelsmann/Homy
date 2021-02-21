@@ -11,7 +11,7 @@ import Foundation
 enum Subjects: String, CaseIterable {
     case GERMAN = "Deutsch"
     case ENGLISH = "Englisch"
-    case MATH = "Mathe"
+    case MATH = "Mathematik"
     case PHYSIK = "Physik"
     case LATAIN = "Latain"
     case BIOLOGIE = "Biologie"
@@ -26,7 +26,6 @@ enum Subjects: String, CaseIterable {
     case HISTORY = "Geschichte"
     case GEOGRAPHIE = "Geographie"
     
-
 }
 
 func getSubjectname(sub: Subjects) -> String {

@@ -13,7 +13,7 @@ struct WorkDetailView: View {
         
         VStack {
             VStack {
-                
+            
                 VStack {
                     Text(homework.subject ?? "Undefined")
                         .font(.largeTitle)
@@ -24,7 +24,6 @@ struct WorkDetailView: View {
                         .foregroundColor(.secondary)
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
-                    
                 }
                 
                 VStack {
@@ -72,15 +71,11 @@ struct WorkDetailView: View {
                             }
                             .foregroundColor(.blue)
                             
-                            
-                            
                             Spacer()
-                            
                         }
                     }
                     .padding(.top, 15)
                 }
-                
                 
                 Spacer()
                 Spacer()

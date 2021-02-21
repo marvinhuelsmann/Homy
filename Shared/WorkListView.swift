@@ -9,55 +9,46 @@ import SwiftUI
 
 struct WorkListView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \HomeWorkCoreData.timeEnd, ascending: true) ])
     private var homeworks: FetchedResults<HomeWorkCoreData>
     
-    @State private var isEditing = false
-    
     var body: some View {
-        
         NavigationView {
-            List {
-                if self.homeworks.isEmpty {
-                    Text("Keine Hausaufgaben eingetragen!")
-                }
+            VStack {
                 
-                ForEach(homeworks) { homework in
-                    HomeWorkDetail(homework: homework)
-                }
-                .onDelete(perform: deleteHomeWork(offsets:))
-            }
-            .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive)).animation(Animation.spring())
-            .toolbar(content: {
-                
-                HStack {
-                    #if os(iOS)
-                    Button(action: {
-                        self.isEditing.toggle()
-                    }) {
-                        Text(isEditing ? "Fertig" : "Edit")
-                            .frame(width: 50, height: 40)
+                List {
+                    if self.homeworks.isEmpty {
+                        Text("Keine Hausaufgaben eingetragen!")
                     }
-                    #endif
                     
-                    NavigationLink(
-                        destination: AddHomeWorkView(),
-                        label: {
-                            VStack {
-                                Text("Hinzufügen")
-                                    .foregroundColor(.blue)
-                                    .font(.headline)
-                                
-                            }
-                        })
+                    ForEach(homeworks) { homework in
+                        HomeWorkDetail(homework: homework)
+                    }
+                    .onDelete(perform: deleteHomeWork(offsets:))
                 }
-            })
+                .listStyle(PlainListStyle())
+                .toolbar(content: {
+                    HStack {
+                        NavigationLink(
+                            destination: AddHomeWorkView(),
+                            label: {
+                                VStack {
+                                    Text("Hinzufügen")
+                                        .foregroundColor(.blue)
+                                        .bold()
+                                        .font(.headline)
+                                }
+                            })
+                    }
+                })
+                
+                .navigationTitle("Hausaufgaben")
+            }
             
-            .navigationTitle("Hausaufgaben")
-            
+            Spacer()
         }
     }
+    
     
     private func saveContext() {
         do {
@@ -96,11 +87,10 @@ struct HomeWorkDetail: View {
             
             VStack(alignment: .leading) {
                 Text(homework.name ?? "Undefined")
-            
+                
                 Text("\(getSubjectname(sub: getSubject(sub: homework.subject ?? "Undefined"))) bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateEnd()))")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
-                
             }
         }
     }
@@ -114,7 +104,6 @@ struct HomeWorkDetail: View {
         let dateString = formatter.string(from: date)
         return dateString
     }
-
     
     func checkDateEnd() -> String {
         let calender = Calendar.current
@@ -129,7 +118,6 @@ struct HomeWorkDetail: View {
             }
         }
         
-        
         if calender.isDateInToday(homework.timeEnd ?? Date()) {
             return "Heute"
         } else if calender.isDateInTomorrow(homework.timeEnd ?? Date()) {
@@ -141,3 +129,5 @@ struct HomeWorkDetail: View {
         }
     }
 }
+
+
