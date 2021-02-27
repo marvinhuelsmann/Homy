@@ -22,12 +22,6 @@ struct TabItemView: View {
                     Image(systemName: "network")
                     Text("Neuigkeiten")
                 }
-            
-            SettingsView()
-                .tabItem {
-                    Image(systemName: "person.2.circle")
-                    Text("Profil")
-                }
         }
         
     }

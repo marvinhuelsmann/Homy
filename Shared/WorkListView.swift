@@ -22,7 +22,9 @@ struct WorkListView: View {
                     }
                     
                     ForEach(homeworks) { homework in
+                        Section(header: Text(getSubjectname(sub: getSubject(sub: homework.subject ?? "Undefined")))) {
                         HomeWorkDetail(homework: homework)
+                        }
                     }
                     .onDelete(perform: deleteHomeWork(offsets:))
                 }
@@ -88,7 +90,7 @@ struct HomeWorkDetail: View {
             VStack(alignment: .leading) {
                 Text(homework.name ?? "Undefined")
                 
-                Text("\(getSubjectname(sub: getSubject(sub: homework.subject ?? "Undefined"))) bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateEnd()))")
+                Text("Bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateEnd()))")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }

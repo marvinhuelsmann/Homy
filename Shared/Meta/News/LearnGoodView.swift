@@ -26,5 +26,6 @@ struct LearnGoodView: View {
 struct LearnGoodView_Previews: PreviewProvider {
     static var previews: some View {
         LearnGoodView()
+            .previewDevice("iPhone 12 Pro Max")
     }
 }

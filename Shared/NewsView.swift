@@ -10,23 +10,38 @@ import SwiftUI
 struct NewsView: View {
     var body: some View {
         NavigationView {
-            ScrollView {
+            VStack {
+                HStack {
+                   
+                    Text("\(Image(systemName: "arrow.turn.down.right")) Erster Blick")
+                        .bold()
+                        .padding(.leading, 40)
+                        .padding(.top)
+                        .font(.title2)
+                    
+                    Spacer()
+                }
                 
-                Text("amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolo")
+                Text("Dein erster Blick sollte wenn du Effizienten arbeiten willst die verschiedenen Aufgaben sein.")
                     .foregroundColor(.secondary)
-                    .padding(.leading)
+                    .padding(.leading, 40)
                     .padding(.trailing)
                     .multilineTextAlignment(.leading)
                 
-                CardView(color: Color(UIColor.gray), headLine: "Besser lernen.", bodyText: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et", desitination: AnyView(LearnGoodView()))
+                CardView(color: Color(UIColor.gray), headLine: "Besser lernen.", bodyText: "Hier erfährst du alles rund ums besser lernen, welche Strategien du Anwenden kannst oder mit was du deine Aufgaben schneller bearbeiten kannst.", desitination: AnyView(LearnGoodView()))
                     .padding(.top, 30)
-
-                CardView(color: Color.blue, headLine: "Perfomant lernen.", bodyText: "Lorem ipsum dolor sit amet, consetetur, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At ver", desitination: AnyView(LearnPerfomanceView()))
+                    .padding(.trailing, 10)
+                    .padding(.leading, 10)
+                
+                CardView(color: Color.blue, headLine: "Perfomant arbeiten.", bodyText: "Du wolltest immer der sein. Der immer seine Aufgaben als erster abgibt? Dann versuch perfomanter zu lernen!", desitination: AnyView(LearnPerfomanceView()))
                     .padding(.top, 10)
+                    .padding(.trailing)
+                    .padding(.leading)
+                
+                
+                Spacer()
                 
             }
-            .padding(.trailing)
-            .padding(.leading)
             
             .navigationTitle("Neuigkeiten")
         }
