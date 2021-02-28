@@ -15,7 +15,6 @@ struct WorkListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
                 List {
                     if self.homeworks.isEmpty {
                         Text("Keine Hausaufgaben eingetragen!")
@@ -30,13 +29,26 @@ struct WorkListView: View {
                 }
                 .listStyle(PlainListStyle())
                 .toolbar(content: {
-                    HStack {
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         NavigationLink(
                             destination: AddHomeWorkView(),
                             label: {
                                 VStack {
                                     Text("Hinzufügen")
                                         .foregroundColor(.blue)
+                                        .bold()
+                                        .font(.headline)
+                                }
+                            })
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        NavigationLink(
+                            destination: AddHomeWorkView(),
+                            label: {
+                                VStack {
+                                    Text("Einstellungen")
+                                        .foregroundColor(.black)
                                         .bold()
                                         .font(.headline)
                                 }

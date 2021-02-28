@@ -6,25 +6,54 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct TabItemView: View {
+    @State private var isUnlocked = false
     var body: some View {
         
-        TabView {
-            WorkListView()
-                .tabItem {
-                    Image(systemName: "books.vertical")
-                    Text("Hausaufgaben")
+        VStack {
+            if self.isUnlocked {
+                TabView {
+                    WorkListView()
+                        .tabItem {
+                            Image(systemName: "books.vertical")
+                            Text("Hausaufgaben")
+                        }
+                    
+                    NewsView()
+                        .tabItem {
+                            Image(systemName: "network")
+                            Text("Neuigkeiten")
+                        }
                 }
-            
-            NewsView()
-                .tabItem {
-                    Image(systemName: "network")
-                    Text("Neuigkeiten")
-                }
+            }
         }
+        .onAppear(perform: authenticate)
         
     }
+    
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Um deine Daten anzeigen zu lassen."
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                DispatchQueue.main.async {
+                    if success {
+                        isUnlocked = true
+                    } else {
+                        isUnlocked = false
+                    }
+                }
+            }
+        } else {
+            isUnlocked = false
+        }
+    }
+    
 }
 
 struct TabItemView_Previews: PreviewProvider {

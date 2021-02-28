@@ -13,7 +13,6 @@ struct WorkDetailView: View {
         
         VStack {
             VStack {
-            
                 VStack {
                     Text(homework.subject ?? "Undefined")
                         .font(.largeTitle)
