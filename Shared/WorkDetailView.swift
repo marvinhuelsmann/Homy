@@ -47,7 +47,9 @@ struct WorkDetailView: View {
                                 .font(.headline)
                                 .foregroundColor(.primary)
                             
-                            Text(homework.notice ?? "Undefined")
+                            ScrollView {
+                                Text(homework.notice ?? "Undefined")
+                            }
                             Spacer()
                             
                         }

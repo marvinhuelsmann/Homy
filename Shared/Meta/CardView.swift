@@ -14,25 +14,26 @@ struct CardView: View {
     var desitination: AnyView
     
     var body: some View {
-            NavigationLink(
-                destination: desitination,
-                label: {
-                    VStack {
-                        Text(headLine)
-                            .font(.largeTitle)
-                            .bold()
-                            .foregroundColor(.white)
-                        
-                        Text(bodyText)
-                            .foregroundColor(.white)
-                            .font(.body)
-                    }
-                    .padding()
-                    .background(color)
-                    .cornerRadius(20)
-                    .shadow(radius: 5)
-                })
-
+        NavigationLink(
+            destination: desitination,
+            label: {
+                VStack {
+                    Text(headLine)
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(.white)
+                    
+                    
+                    Text(bodyText)
+                        .foregroundColor(.white)
+                        .font(.body)
+                }
+                .padding()
+                .background(color)
+                .cornerRadius(20)
+                .shadow(radius: 5)
+            })
+        
     }
 }
 

@@ -39,6 +39,8 @@
 		4BEDFB5F25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */; };
 		4BFE4AE725AF3797009E0126 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */; };
 		4BFE4AE825AF3797009E0126 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */; };
+		4BFE630625ED4B8B002BA26F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE630525ED4B8B002BA26F /* SettingsView.swift */; };
+		4BFE630725ED4B8B002BA26F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE630525ED4B8B002BA26F /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,7 @@
 		4BB74A3225E1C91500905918 /* LearnPerfomanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnPerfomanceView.swift; sourceTree = "<group>"; };
 		4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeWorkView.swift; sourceTree = "<group>"; };
 		4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailView.swift; sourceTree = "<group>"; };
+		4BFE630525ED4B8B002BA26F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,7 @@
 				4B3B47FC25E1AE3900741B6B /* NewsView.swift */,
 				4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */,
 				4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */,
+				4BFE630525ED4B8B002BA26F /* SettingsView.swift */,
 				4B6508E625AF31A400FEA20A /* Assets.xcassets */,
 				4B1BE04225DDBD8500F26CBA /* HomeWork.xcdatamodeld */,
 				4B1BE04B25DDC04A00F26CBA /* Persistence.swift */,
@@ -354,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BFE630625ED4B8B002BA26F /* SettingsView.swift in Sources */,
 				4B65090F25AF324500FEA20A /* Subjects.swift in Sources */,
 				4B1BE04425DDBD8500F26CBA /* HomeWork.xcdatamodeld in Sources */,
 				4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
@@ -385,6 +390,7 @@
 				4B3B47F525E1AAB100741B6B /* TabItemView.swift in Sources */,
 				4B6508F825AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
 				4BDE378E25AF3EF800158395 /* Subjects.swift in Sources */,
+				4BFE630725ED4B8B002BA26F /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

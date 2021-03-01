@@ -44,7 +44,7 @@ struct WorkListView: View {
                     
                     ToolbarItem(placement: .navigationBarLeading) {
                         NavigationLink(
-                            destination: AddHomeWorkView(),
+                            destination: SettingsView(),
                             label: {
                                 VStack {
                                     Text("Einstellungen")
