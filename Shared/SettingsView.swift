@@ -19,7 +19,7 @@ struct SettingsView: View {
                     .foregroundColor(.secondary)
                     .font(.subheadline)
                 
-                Spacer()
+            
             }
         }
         .navigationTitle("Einstellungen")
@@ -28,6 +28,8 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        NavigationView {
+            SettingsView()
+        }
     }
 }

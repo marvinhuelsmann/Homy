@@ -23,11 +23,14 @@ struct AddHomeWorkView: View {
     @State private var notice: String = ""
     @State private var fillInAll: Bool = true
     
+    @ObservedObject var notificationManager = NotificationHandler()
+    
     private var choose = [Subjects.ENGLISH.rawValue, Subjects.GERMAN.rawValue, Subjects.MATH.rawValue, Subjects.PHYSIK.rawValue, Subjects.BIOLOGIE.rawValue, Subjects.LATAIN.rawValue, Subjects.RELIGION.rawValue, Subjects.SPANISH.rawValue, Subjects.HOMEBUSINESS.rawValue, Subjects.FRANCE.rawValue, Subjects.INFORMATIK.rawValue, Subjects.CHEMIE.rawValue, Subjects.HISTORY.rawValue, Subjects.SOCIAL.rawValue, Subjects.CREATE.rawValue, Subjects.GEOGRAPHIE.rawValue]
     
     var body: some View {
         
         VStack {
+            
             Form {
                 Section(header: Text("Aufgabe*")) {
                     TextField("Arbeitsblatt 4", text: $name)
@@ -96,6 +99,9 @@ struct AddHomeWorkView: View {
     }
     
     func makeHomeWork() {
+        
+        self.notificationManager.sendNotification(title: self.name, subtitle: self.subject, body: self.notice, launchIn: 10)
+        
         let newHomeWork = HomeWorkCoreData(context: viewContext)
         newHomeWork.name = self.name
         newHomeWork.subject = getSubjectname(sub: getSubject(sub: self.subject))
