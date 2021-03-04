@@ -59,7 +59,6 @@ struct AddHomeWorkView: View {
                     Button("Hausaufgabe hinzufügen") {
                         if name != "" && subject != "" {
                             makeHomeWork()
-                            self.mode.wrappedValue.dismiss()
                             
                         } else {
                             fillInAll = false
@@ -92,6 +91,9 @@ struct AddHomeWorkView: View {
     private func saveContext() {
         do {
             try viewContext.save()
+            self.mode.wrappedValue.dismiss()
+            
+            
         } catch {
             let error = error as NSError
             fatalError("Unresolved Error: \(error)")
@@ -100,7 +102,9 @@ struct AddHomeWorkView: View {
     
     func makeHomeWork() {
         
-        self.notificationManager.sendNotification(title: self.name, subtitle: self.subject, body: self.notice, launchIn: 10)
+        if SettingsView().allowNotifications {
+            self.notificationManager.sendNotification(title: self.name, subtitle: self.subject, body: self.notice, launchIn: self.timeEnd)
+        }
         
         let newHomeWork = HomeWorkCoreData(context: viewContext)
         newHomeWork.name = self.name

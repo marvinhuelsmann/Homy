@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct WorkListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \HomeWorkCoreData.timeEnd, ascending: true) ])
+    /// List of all current HomeWorks in HomeWorksCoreData
     private var homeworks: FetchedResults<HomeWorkCoreData>
+    
+    /// Editing Mode to delete HomeWorks
+    @State private var isEditing: Bool = false
+    @State private var showAlert = false
     
     var body: some View {
         NavigationView {
@@ -22,39 +28,54 @@ struct WorkListView: View {
                     
                     ForEach(homeworks) { homework in
                         Section(header: Text(getSubjectname(sub: getSubject(sub: homework.subject ?? "Undefined")))) {
-                        HomeWorkDetail(homework: homework)
+                            HomeWorkDetail(homework: homework)
                         }
                     }
                     .onDelete(perform: deleteHomeWork(offsets:))
                 }
+                .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive)).animation(Animation.spring())
                 .listStyle(PlainListStyle())
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(
-                            destination: AddHomeWorkView(),
-                            label: {
-                                VStack {
-                                    Text("Hinzufügen")
-                                        .foregroundColor(.blue)
-                                        .bold()
-                                        .font(.headline)
-                                }
-                            })
+                        if !isEditing {
+                            NavigationLink(
+                                destination: AddHomeWorkView(),
+                                label: {
+                                    VStack {
+                                        Text("Hinzufügen")
+                                        
+                                    }
+                                })
+                        } else {
+                            
+                            Button("Alle löschen") {
+                                self.showAlert = true
+                            }
+                        }
                     }
-                    
                     ToolbarItem(placement: .navigationBarLeading) {
-                        NavigationLink(
-                            destination: SettingsView(),
-                            label: {
-                                VStack {
-                                    Text("Einstellungen")
-                                        .foregroundColor(.black)
-                                        .bold()
-                                        .font(.headline)
+                        if !self.homeworks.isEmpty {
+                            VStack {
+                                Button(isEditing ? "Fertig" : "Bearbeiten") {
+                                    self.isEditing.toggle()
                                 }
-                            })
+                            }
+                        }
                     }
                 })
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Bist du sicher?"),
+                        message: Text("Du löscht alle deine gespeicherten Hausaufgaben. Du kannst diesen Schritt nicht mehr rückgänging machen!"),
+                        primaryButton: .default(
+                            Text("Abbrechen")
+                        ),
+                        secondaryButton: .destructive(
+                            Text("Löschen"),
+                            action: deleteAllHomeWorks
+                        )
+                    )
+                }
                 
                 .navigationTitle("Hausaufgaben")
             }
@@ -63,7 +84,30 @@ struct WorkListView: View {
         }
     }
     
+    /// Delete all HomeWorks they saved in HomeWorkCoreData
+    private func deleteAllHomeWorks() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "HomeWorkCoreData")
+        
+        // Configure Fetch Request
+        fetchRequest.includesPropertyValues = false
+        
+        do {
+            let items = try viewContext.fetch(fetchRequest) as! [NSManagedObject]
+            
+            for item in items {
+                viewContext.delete(item)
+            }
+            
+            // Save Changes
+            saveContext()
+            self.isEditing = false
+            
+        } catch {
+            // Error handling
+        }
+    }
     
+    /// Saves he
     private func saveContext() {
         do {
             try viewContext.save()
@@ -73,6 +117,8 @@ struct WorkListView: View {
         }
     }
     
+    /// To delete one HomeWork
+    /// - Parameter offsets: To get the current HomeWork
     func deleteHomeWork(offsets: IndexSet) {
         withAnimation {
             offsets.map {
@@ -94,6 +140,7 @@ struct WorkListView_Previews: PreviewProvider {
     }
 }
 
+/// The detail view of one HomeWork in the list
 struct HomeWorkDetail: View {
     var homework: HomeWorkCoreData
     var body: some View {
@@ -109,6 +156,9 @@ struct HomeWorkDetail: View {
         }
     }
     
+    /// To get the current Hour and Minutes of the Date
+    /// - Parameter date: The date that will be converted
+    /// - Returns: The converted Date in HH:MM
     func checkTime(date: Date) -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "nl_NL")
@@ -119,6 +169,8 @@ struct HomeWorkDetail: View {
         return dateString
     }
     
+    /// To get the end Date
+    /// - Returns: The name of the day
     func checkDateEnd() -> String {
         let calender = Calendar.current
         

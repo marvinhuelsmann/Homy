@@ -2,34 +2,38 @@
 //  SettingsView.swift
 //  HomeWorkPlanner
 //
-//  Created by Marvin Hülsmann on 01.03.21.
+//  Created by Marvin Hülsmann on 04.03.21.
 //
 
 import SwiftUI
 
 struct SettingsView: View {
-    
-    private var finalString: String = "Default value"
+    @AppStorage("secureOnLogin") var requiredPasswordIdOnLogin = false
+    @AppStorage("notifications") var allowNotifications = true
     
     var body: some View {
         NavigationView {
-            
-            VStack {
-                Text("Lege deine Lieblingseinstellungen fest.")
-                    .foregroundColor(.secondary)
-                    .font(.subheadline)
+            Form {
                 
-            
+                Section(header: Text("Datenschutz & Sicherheit")) {
+                    Toggle("FaceID", isOn: $requiredPasswordIdOnLogin)
+                      
+                
+        
+                }
+                
+                Section(header: Text("Töne & Benachrichtigungen")) {
+                    Toggle("Benachrichtigung", isOn: $allowNotifications)
+                }
             }
         }
+        
         .navigationTitle("Einstellungen")
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            SettingsView()
-        }
+        SettingsView()
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WorkDetailView: View {
     var homework: HomeWorkCoreData
+    
     var body: some View {
         
         VStack {

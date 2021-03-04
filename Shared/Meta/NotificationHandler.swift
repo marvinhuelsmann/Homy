@@ -22,14 +22,23 @@ class NotificationHandler: ObservableObject {
         }
     }
     
-    func sendNotification(title: String, subtitle: String?, body: String, launchIn: Double) {
+    func sendNotification(title: String, subtitle: String?, body: String, launchIn: Date) {
         let content = UNMutableNotificationContent()
-        content.title = title
-        content.subtitle = subtitle ?? ""
-        content.sound = UNNotificationSound.defaultCritical
-
-        // show this notification five seconds from now
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: launchIn, repeats: false)
+        content.title = "Abgabe Termin!"
+        content.subtitle = "Im Fach \(subtitle ?? "") muss die Aufgabe \(title) abgegeben werden!"
+        content.sound = UNNotificationSound.default
+        
+        
+        // define the time when the notification will be called
+        var dateComponents = DateComponents()
+        dateComponents.hour = Calendar.current.component(.hour, from: launchIn)
+        dateComponents.minute = Calendar.current.component(.minute, from: launchIn)
+        dateComponents.month = Calendar.current.component(.month, from: launchIn)
+        dateComponents.day = Calendar.current.component(.day, from: launchIn)
+        dateComponents.weekOfMonth = Calendar.current.component(.weekOfMonth, from: launchIn)
+        dateComponents.year = Calendar.current.component(.year, from: launchIn)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        
         
         // choose a random identifier
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
