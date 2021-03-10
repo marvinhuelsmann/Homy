@@ -24,8 +24,8 @@ class NotificationHandler: ObservableObject {
     
     func sendNotification(title: String, subtitle: String?, body: String, launchIn: Date) {
         let content = UNMutableNotificationContent()
-        content.title = "Abgabe Termin!"
-        content.subtitle = "Im Fach \(subtitle ?? "") muss die Aufgabe \(title) abgegeben werden!"
+        content.title = "Dein Abgabe Termin ist erreicht!"
+        content.body = "Im Fach \(subtitle ?? "") muss die Aufgabe \(title) abgegeben werden!"
         content.sound = UNNotificationSound.default
         
         

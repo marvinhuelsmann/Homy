@@ -88,6 +88,7 @@ struct AddHomeWorkView: View {
         .navigationTitle("Hinzufügen")
     }
     
+    /// Save the Context from the 
     private func saveContext() {
         do {
             try viewContext.save()
@@ -100,6 +101,7 @@ struct AddHomeWorkView: View {
         }
     }
     
+    /// Add a new HomeWork with the data from the form
     func makeHomeWork() {
         
         if SettingsView().allowNotifications {

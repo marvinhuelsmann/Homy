@@ -22,11 +22,11 @@ struct TabItemView: View {
                             Text("Hausaufgaben")
                         }
                     
-                    NewsView()
-                        .tabItem {
-                            Image(systemName: "network")
-                            Text("Neuigkeiten")
-                        }
+//                    NewsView()
+//                        .tabItem {
+//                            Image(systemName: "network")
+//                            Text("Neuigkeiten")
+//                        }
                     
                     ProfileView()
                         .tabItem {

@@ -14,7 +14,7 @@ struct ProfileView: View {
             
    
             VStack {
-              Text("Test!")
+              Text("Mit Apple anmelden...")
             }
             
             

@@ -12,23 +12,19 @@ struct SettingsView: View {
     @AppStorage("notifications") var allowNotifications = true
     
     var body: some View {
-        NavigationView {
-            Form {
-                
-                Section(header: Text("Datenschutz & Sicherheit")) {
-                    Toggle("FaceID", isOn: $requiredPasswordIdOnLogin)
-                      
-                
-        
-                }
-                
-                Section(header: Text("Töne & Benachrichtigungen")) {
-                    Toggle("Benachrichtigung", isOn: $allowNotifications)
+            VStack {
+                Form {
+                    
+                    Section(header: Text("Allgemein"), footer: Text("Aktiviere um FaceID beim öffnen der App zu aktivieren.")) {
+                        Toggle("FaceID", isOn: $requiredPasswordIdOnLogin)
+                    }
+                    
+                    Section(footer: Text("Erhalte Töne wenn du deine Aufgabe abgeben musst.")) {
+                        Toggle("Benachrichtigung", isOn: $allowNotifications)
+                    }
+                    
                 }
             }
-        }
-        
-        .navigationTitle("Einstellungen")
     }
 }
 
