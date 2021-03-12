@@ -14,6 +14,9 @@ struct WorkListView: View {
     /// List of all current HomeWorks in HomeWorksCoreData
     private var homeworks: FetchedResults<HomeWorkCoreData>
     
+    /// Check if the AddHomeWorkView is open
+    @State private var isAddButtonClicking: Bool = false
+    
     /// Editing Mode to delete HomeWorks
     @State private var isEditing: Bool = false
     @State private var showAlert = false
@@ -38,16 +41,15 @@ struct WorkListView: View {
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         if !isEditing {
-                            NavigationLink(
-                                destination: AddHomeWorkView(),
-                                label: {
-                                    VStack {
-                                        Text("Hinzufügen")
-                                        
-                                    }
-                                })
-                        } else {
+                            NavigationLink(destination: AddHomeWorkView(), isActive: $isAddButtonClicking, label: {
+                                VStack {
+                                    Text("Hizufügen")
+                                }
+                            })
                             
+                            
+            
+                        } else {
                             Button("Alle löschen") {
                                 self.showAlert = true
                             }
@@ -78,6 +80,9 @@ struct WorkListView: View {
                 }
                 
                 .navigationTitle("Hausaufgaben")
+            } .onAppear {
+                    self.isAddButtonClicking = false
+
             }
             
             Spacer()
@@ -88,7 +93,6 @@ struct WorkListView: View {
     private func deleteAllHomeWorks() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "HomeWorkCoreData")
         
-        // Configure Fetch Request
         fetchRequest.includesPropertyValues = false
         
         do {
@@ -97,17 +101,17 @@ struct WorkListView: View {
             for item in items {
                 viewContext.delete(item)
             }
-            
-            // Save Changes
+    
             saveContext()
             self.isEditing = false
             
         } catch {
-            // Error handling
+            let error = error as NSError
+            fatalError("Unresolved Error: \(error)")
         }
     }
     
-    /// Saves he
+    /// Saves the HomeWorks
     private func saveContext() {
         do {
             try viewContext.save()

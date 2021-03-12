@@ -10,6 +10,11 @@ import SwiftUI
 struct WorkDetailView: View {
     var homework: HomeWorkCoreData
     
+    @State var showDeleteAlert: Bool = false
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @Environment(\.managedObjectContext) private var viewContext
+    
     var body: some View {
         
         VStack {
@@ -18,7 +23,6 @@ struct WorkDetailView: View {
                     Text(homework.subject ?? "Undefined")
                         .font(.largeTitle)
                         .bold()
-                        .padding(.top)
                     
                     Text("\(checkDate()) bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateName(date: homework.timeEnd ?? Date())))")
                         .foregroundColor(.secondary)
@@ -79,12 +83,60 @@ struct WorkDetailView: View {
                     .padding(.top, 15)
                 }
                 
-                Spacer()
-                Spacer()
-                Spacer()
+                HStack(alignment: .center) {
+                    Spacer()
+                    Button("Abschließen") {
+                        showDeleteAlert = true
+                    }
+                    .foregroundColor(.black)
+                    Spacer()
+                }
+                .alert(isPresented: $showDeleteAlert) {
+                    Alert(
+                        title: Text("Bist du sicher?"),
+                        message: Text("Diese Aufgabe wird von deiner Liste gelöscht!"),
+                        primaryButton: .default(
+                            Text("Abbrechen")
+                        ),
+                        secondaryButton: .destructive(
+                            Text("Fertig"),
+                            action: deleteHomeWork
+                        )
+                    )
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(5)
+                .shadow(radius: 10)
+                .padding()
+                
+     
+             Spacer()
                 
             }
         }
+    }
+    
+    /// Saves the homework list
+    private func saveContext() {
+        do {
+            try viewContext.save()
+        } catch {
+            let error = error as NSError
+            fatalError("Unresolved Error: \(error)")
+        }
+    }
+    
+    /// To delete one HomeWork
+    func deleteHomeWork() {
+        
+        viewContext.delete(homework)
+        
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
+        
+        saveContext()
+        mode.wrappedValue.dismiss()
     }
     
     func checkTime(date: Date) -> String {

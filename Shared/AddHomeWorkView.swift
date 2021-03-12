@@ -9,11 +9,14 @@ import SwiftUI
 
 
 struct AddHomeWorkView: View {
+    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(sortDescriptors: [])
     private var movies: FetchedResults<HomeWorkCoreData>
+    
+    private let generator = UISelectionFeedbackGenerator()
     
     @State private var name: String = ""
     @State private var timeEnd = Date().addingTimeInterval(1200)
@@ -54,37 +57,41 @@ struct AddHomeWorkView: View {
                     DatePicker("Bis wann?", selection: $timeEnd)
                 }
                 
-                HStack(alignment: .center) {
-                    Spacer()
-                    Button("Hausaufgabe hinzufügen") {
-                        if name != "" && subject != "" {
-                            makeHomeWork()
-                            
-                        } else {
-                            fillInAll = false
+                Section {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        Button("Hausaufgabe hinzufügen") {
+                            if name != "" && subject != "" {
+                                makeHomeWork()
+                            } else {
+                                fillInAll = false
+                            }
+                            generator.selectionChanged()
                         }
-                        let generator = UISelectionFeedbackGenerator()
-                        generator.selectionChanged()
-                    }
-                    Spacer()
-                }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(5)
-                .shadow(radius: 10)
-                .padding()
-                
-                if !fillInAll {
-                    HStack {
-                        Spacer()
-                        Text("Es wurden nicht alle benötigten Sternchen (*) Felder ausgefüllt!")
-                            .multilineTextAlignment(.center)
+                        .foregroundColor(.black)
                         Spacer()
                     }
+                    .listRowInsets(EdgeInsets())
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(5)
+                    .shadow(radius: 10)
+                    .padding()
+                    
+                    if !fillInAll {
+                        HStack {
+                            Spacer()
+                            Text("Es wurden nicht alle relevanten benötigten Felder ausgefüllt!")
+                                .bold()
+                                .multilineTextAlignment(.center)
+                            Spacer()
+                        }
+                        .listRowInsets(EdgeInsets())
+                    }
                 }
+                .background(Color(UIColor.black))
             }
         }
-        
         .navigationTitle("Hinzufügen")
     }
     
@@ -105,7 +112,9 @@ struct AddHomeWorkView: View {
     func makeHomeWork() {
         
         if SettingsView().allowNotifications {
-            self.notificationManager.sendNotification(title: self.name, subtitle: self.subject, body: self.notice, launchIn: self.timeEnd)
+            let minute: TimeInterval = -4
+            
+            self.notificationManager.sendNotification(title: self.name, subtitle: self.subject, body: self.notice, launchIn: self.timeEnd.addingTimeInterval(minute))
         }
         
         let newHomeWork = HomeWorkCoreData(context: viewContext)

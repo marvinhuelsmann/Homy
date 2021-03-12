@@ -34,6 +34,18 @@ struct TabItemView: View {
                             Text("Profil")
                         }
                 }
+            } else {
+                VStack {
+                Text("Passwortschutz")
+                    .bold()
+                    .font(.largeTitle)
+                Text("Deine Daten sind mit FaceID geschütz. Um auf die Daten zu greifen zu können musst du dich mit FaceID identifizieren.")
+                    .padding(.trailing)
+                    .padding(.leading)
+                    
+                    Spacer()
+                }
+                .padding(.top, 100)
             }
         }
         .onAppear(perform: authenticate)

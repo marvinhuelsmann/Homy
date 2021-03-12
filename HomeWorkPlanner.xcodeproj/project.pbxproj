@@ -12,7 +12,6 @@
 		4B1BE04425DDBD8500F26CBA /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04225DDBD8500F26CBA /* Data.xcdatamodeld */; };
 		4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
-		4B2FFCFF25EEF0EC0031FFAA /* MotivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FFCFE25EEF0EC0031FFAA /* MotivationView.swift */; };
 		4B2FFD0425EEF1E20031FFAA /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */; };
 		4B3B1CA825CF5C2000E01BFE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */; };
 		4B3B1CAA25CF5C2000E01BFE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA925CF5C2000E01BFE /* SwiftUI.framework */; };
@@ -34,10 +33,10 @@
 		4B6508FB25AF31A400FEA20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6508E625AF31A400FEA20A /* Assets.xcassets */; };
 		4B6508FC25AF31A400FEA20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6508E625AF31A400FEA20A /* Assets.xcassets */; };
 		4B65090F25AF324500FEA20A /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65090E25AF324500FEA20A /* Subjects.swift */; };
+		4B8A6D1225F9703100079852 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A6D1125F9703100079852 /* AppDesign.swift */; };
+		4B8A6D1325F9703100079852 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A6D1125F9703100079852 /* AppDesign.swift */; };
 		4B8CFDD725F17C9700F615E1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CFDD625F17C9700F615E1 /* ProfileView.swift */; };
 		4B8CFDD825F17C9700F615E1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CFDD625F17C9700F615E1 /* ProfileView.swift */; };
-		4BB74A2B25E1C8FF00905918 /* LearnGoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB74A2A25E1C8FF00905918 /* LearnGoodView.swift */; };
-		4BB74A3325E1C91500905918 /* LearnPerfomanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB74A3225E1C91500905918 /* LearnPerfomanceView.swift */; };
 		4BCD197925F189FE006A8D3E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD197825F189FE006A8D3E /* SettingsView.swift */; };
 		4BCD197A25F189FE006A8D3E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD197825F189FE006A8D3E /* SettingsView.swift */; };
 		4BDE378E25AF3EF800158395 /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65090E25AF324500FEA20A /* Subjects.swift */; };
@@ -75,7 +74,6 @@
 		4B0A47B225E1D845008B7431 /* LongTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextView.swift; sourceTree = "<group>"; };
 		4B1BE04325DDBD8500F26CBA /* HomeWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork.xcdatamodel; sourceTree = "<group>"; };
 		4B1BE04B25DDC04A00F26CBA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4B2FFCFE25EEF0EC0031FFAA /* MotivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationView.swift; sourceTree = "<group>"; };
 		4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorkWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -96,9 +94,8 @@
 		4B6508F525AF31A400FEA20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B6508F625AF31A400FEA20A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		4B65090E25AF324500FEA20A /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
+		4B8A6D1125F9703100079852 /* AppDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
 		4B8CFDD625F17C9700F615E1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		4BB74A2A25E1C8FF00905918 /* LearnGoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnGoodView.swift; sourceTree = "<group>"; };
-		4BB74A3225E1C91500905918 /* LearnPerfomanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnPerfomanceView.swift; sourceTree = "<group>"; };
 		4BCD197825F189FE006A8D3E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeWorkView.swift; sourceTree = "<group>"; };
 		4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailView.swift; sourceTree = "<group>"; };
@@ -208,16 +205,6 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		4BB74A2925E1C8E400905918 /* News */ = {
-			isa = PBXGroup;
-			children = (
-				4BB74A2A25E1C8FF00905918 /* LearnGoodView.swift */,
-				4BB74A3225E1C91500905918 /* LearnPerfomanceView.swift */,
-				4B2FFCFE25EEF0EC0031FFAA /* MotivationView.swift */,
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
 		4BDE378D25AF3EED00158395 /* Meta */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,7 +213,7 @@
 				4B3B47F325E1AAB100741B6B /* TabItemView.swift */,
 				4B3B480525E1B4EB00741B6B /* CardView.swift */,
 				4B0A47B225E1D845008B7431 /* LongTextView.swift */,
-				4BB74A2925E1C8E400905918 /* News */,
+				4B8A6D1125F9703100079852 /* AppDesign.swift */,
 			);
 			path = Meta;
 			sourceTree = "<group>";
@@ -373,7 +360,7 @@
 				4B1BE04425DDBD8500F26CBA /* Data.xcdatamodeld in Sources */,
 				4BCD197925F189FE006A8D3E /* SettingsView.swift in Sources */,
 				4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
-				4B2FFCFF25EEF0EC0031FFAA /* MotivationView.swift in Sources */,
+				4B8A6D1225F9703100079852 /* AppDesign.swift in Sources */,
 				4B3B47FD25E1AE3900741B6B /* NewsView.swift in Sources */,
 				4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */,
 				4B6508F925AF31A400FEA20A /* WorkListView.swift in Sources */,
@@ -381,8 +368,6 @@
 				4B8CFDD725F17C9700F615E1 /* ProfileView.swift in Sources */,
 				4B6508F725AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
 				4B3B47F425E1AAB100741B6B /* TabItemView.swift in Sources */,
-				4BB74A2B25E1C8FF00905918 /* LearnGoodView.swift in Sources */,
-				4BB74A3325E1C91500905918 /* LearnPerfomanceView.swift in Sources */,
 				4B3B480625E1B4EB00741B6B /* CardView.swift in Sources */,
 				4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */,
 				4B0A47B325E1D845008B7431 /* LongTextView.swift in Sources */,
@@ -401,6 +386,7 @@
 				4BEDFB5F25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
 				4BFE4AE825AF3797009E0126 /* WorkDetailView.swift in Sources */,
 				4B3B47F525E1AAB100741B6B /* TabItemView.swift in Sources */,
+				4B8A6D1325F9703100079852 /* AppDesign.swift in Sources */,
 				4B6508F825AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
 				4BCD197A25F189FE006A8D3E /* SettingsView.swift in Sources */,
 				4B8CFDD825F17C9700F615E1 /* ProfileView.swift in Sources */,
