@@ -4,6 +4,7 @@
         <attribute name="link" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="notice" optional="YES" attributeType="String"/>
+        <attribute name="notify" optional="YES" attributeType="String"/>
         <attribute name="subject" optional="YES" attributeType="String"/>
         <attribute name="timeEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
@@ -11,7 +12,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="HomeWorkCoreData" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="HomeWorkCoreData" positionX="-63" positionY="-18" width="128" height="119"/>
         <element name="SubjectsData" positionX="-36" positionY="45" width="128" height="44"/>
     </elements>
 </model>

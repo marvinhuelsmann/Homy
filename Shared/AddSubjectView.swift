@@ -35,15 +35,15 @@ struct AddSubjectView: View {
         VStack {
             
             Form {
-                Section(header: Text("Aufgabe*")) {
-                    TextField("Arbeitsblatt 4", text: $name)
+                Section(header: Text("Fach Name*")) {
+                    TextField("Mathematik", text: $name)
                 }
      
                 
                 Section {
                     HStack(alignment: .center) {
                         Spacer()
-                        Button("Hausaufgabe hinzufügen") {
+                        Button("Fach hinzufügen") {
                             if name != "" {
                                 makeSubject()
                             } else {
@@ -58,12 +58,13 @@ struct AddSubjectView: View {
                     .padding()
                     .background(Color.white)
                     .cornerRadius(5)
-                    .shadow(radius: 10)
+                    .shadow(radius: 4)
                     .padding()
                     
                     if !fillInAll {
                         HStack {
                             Spacer()
+                            
                             Text("Es wurden nicht alle relevanten benötigten Felder ausgefüllt!")
                                 .bold()
                                 .multilineTextAlignment(.center)
@@ -75,7 +76,7 @@ struct AddSubjectView: View {
                 .background(colorScheme == .light ? Color(UIColor.secondarySystemBackground) : Color.black)
             }
         }
-        .navigationTitle("Hinzufügen")
+        .navigationTitle("Neues Fach")
     }
     
     /// Save the Context from the

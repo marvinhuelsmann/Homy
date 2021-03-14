@@ -17,6 +17,7 @@ enum BiometricType{
 /// Detect your device with the current name.
 /// - Returns: Device Biometric name
 func getBiometricTypeName() -> String {
+    
     if getBiometricType() == BiometricType.face {
         return "FaceID"
     } else if getBiometricType() == BiometricType.touch {
@@ -30,7 +31,7 @@ func getBiometricTypeName() -> String {
 func getBiometricType() -> BiometricType {
     
     let authenticationContext = LAContext()
-    let auth = authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+    authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
     switch (authenticationContext.biometryType){
     case .faceID:
         return .face

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    
     /// AppSettings
     @AppStorage("secureOnLogin") var requiredPasswordIdOnLogin = false
     @AppStorage("notifications") var allowNotifications = true
-    
+
     var body: some View {
+        
         VStack {
             Form {
                 
@@ -25,7 +25,17 @@ struct SettingsView: View {
                 Section(footer: Text("Erhalte Töne wenn du deine Aufgabe den Abgabe Termin erreicht.")) {
                     Toggle("Benachrichtigung", isOn: $allowNotifications)
                 }
-  
+                
+                Section(footer: Text("Erstelle ein neues Fach um es deinen Hausaufgaben zu teilen zu könne.")) {
+                    NavigationLink(destination: SubjectListView()) {
+                        VStack {
+                            Text("Fächer")
+                        }
+                    }
+                    
+                }
+                
+                
             }
         }
     }

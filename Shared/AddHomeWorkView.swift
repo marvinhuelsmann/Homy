@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Combine
 
 struct AddHomeWorkView: View {
     
@@ -22,34 +22,38 @@ struct AddHomeWorkView: View {
     
     @FetchRequest(sortDescriptors: [])
     private var homeworks: FetchedResults<HomeWorkCoreData>
-    @FetchRequest(sortDescriptors: [])
-    private var subjects: FetchedResults<SubjectsData>
+    
+    @FetchRequest(
+        entity: SubjectsData.entity(),
+        sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]
+    )private var subjects: FetchedResults<SubjectsData>
+    
     
     private let generator = UISelectionFeedbackGenerator()
     
     @State private var name: String = ""
     @State private var timeEnd = Date().addingTimeInterval(1200)
-    @State private var subject: String = ""
+    @State private var subject: String? = ""
     @State private var link: String = ""
+    @State private var notify: String = ""
     
     @State private var notice: String = ""
     @State private var fillInAll: Bool = true
     
     @ObservedObject var notificationManager = NotificationHandler()
     
-    private var choose = [Subjects.ENGLISH.rawValue, Subjects.GERMAN.rawValue, Subjects.MATH.rawValue, Subjects.PHYSIK.rawValue, Subjects.BIOLOGIE.rawValue, Subjects.LATAIN.rawValue, Subjects.RELIGION.rawValue, Subjects.SPANISH.rawValue, Subjects.HOMEBUSINESS.rawValue, Subjects.FRANCE.rawValue, Subjects.INFORMATIK.rawValue, Subjects.CHEMIE.rawValue, Subjects.HISTORY.rawValue, Subjects.SOCIAL.rawValue, Subjects.CREATE.rawValue, Subjects.GEOGRAPHIE.rawValue]
-    
     var body: some View {
         
         VStack {
-            
             Form {
                 Section(header: Text("Aufgabe*")) {
                     TextField("Arbeitsblatt 4", text: $name)
                     
                     Picker(selection: $subject, label: Text("Fach")) {
-                        ForEach(choose, id: \.self) {
-                            Text($0)
+                        
+                        ForEach(subjects) { subjectObject in
+                            Text(subjectObject.name ?? "")
+                                .tag(subjectObject.name as String?)
                         }
                     }
                 }
@@ -66,11 +70,25 @@ struct AddHomeWorkView: View {
                     DatePicker("Bis wann?", selection: $timeEnd)
                 }
                 
+                
+                if SettingsView().allowNotifications {
+                    Section(header: Text("Benachrichigung*")) {
+                        TextField("5", text: $notify)
+                            .keyboardType(.numberPad)
+                            .onReceive(Just(notify)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.notify = filtered
+                                }
+                            }
+                    }
+                }
+                
                 Section {
                     HStack(alignment: .center) {
                         Spacer()
                         Button("Hausaufgabe hinzufügen") {
-                            if name != "" && subject != "" {
+                            if name != "" && subject != "" && notify != "" {
                                 makeHomeWork()
                             } else {
                                 fillInAll = false
@@ -84,7 +102,7 @@ struct AddHomeWorkView: View {
                     .padding()
                     .background(Color.white)
                     .cornerRadius(5)
-                    .shadow(radius: 10)
+                    .shadow(radius: 4)
                     .padding()
                     
                     if !fillInAll {
@@ -101,7 +119,7 @@ struct AddHomeWorkView: View {
                 .background(colorScheme == .light ? Color(UIColor.secondarySystemBackground) : Color.black)
             }
         }
-        .navigationTitle("Hinzufügen")
+        .navigationTitle("Neue Aufgabe")
     }
     
     /// Save the Context from the 
@@ -119,18 +137,22 @@ struct AddHomeWorkView: View {
     func makeHomeWork() {
         
         if SettingsView().allowNotifications {
-            let minute: TimeInterval = -300
+            let notifyInt: Int = Int(notify) ?? 1
+            let finalSeconds: Int = notifyInt * 60
+            
+            let minute: TimeInterval = TimeInterval(-finalSeconds)
             
             self.notificationManager.sendNotification(title: self.name, subtitle: self.subject, body: self.notice, launchIn: self.timeEnd.addingTimeInterval(minute))
         }
         
         let newHomeWork = HomeWorkCoreData(context: viewContext)
         newHomeWork.name = self.name
-        newHomeWork.subject = getSubjectname(sub: getSubject(sub: self.subject))
+        newHomeWork.subject = self.subject
         newHomeWork.notice = self.notice
         
         newHomeWork.timeEnd = self.timeEnd
         newHomeWork.link  = self.link
+        newHomeWork.notify = self.notify
         
         saveContext()
     }

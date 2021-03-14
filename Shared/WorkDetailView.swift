@@ -85,12 +85,17 @@ struct WorkDetailView: View {
                 
                 HStack(alignment: .center) {
                     Spacer()
-                    Button("Abschließen") {
+                    Button("Erledigt") {
                         showDeleteAlert = true
                     }
                     .foregroundColor(.black)
                     Spacer()
                 }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(5)
+                .shadow(radius: 10)
+                .padding()
                 .alert(isPresented: $showDeleteAlert) {
                     Alert(
                         title: Text("Bist du sicher?"),
@@ -104,11 +109,9 @@ struct WorkDetailView: View {
                         )
                     )
                 }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(5)
-                .shadow(radius: 10)
-                .padding()
+                .onTapGesture {
+                    showDeleteAlert = true
+                }
                 
      
              Spacer()

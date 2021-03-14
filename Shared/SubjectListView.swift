@@ -1,18 +1,19 @@
 //
-//  ContentView.swift
-//  Shared
+//  SubjectListView.swift
+//  HomeWorkPlanner
 //
-//  Created by Marvin Hülsmann on 13.01.21.
+//  Created by Marvin Hülsmann on 14.03.21.
 //
 
 import SwiftUI
+
 import CoreData
 
-struct WorkListView: View {
+struct SubjectListView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \HomeWorkCoreData.timeEnd, ascending: true) ])
+    @FetchRequest(sortDescriptors: [])
     /// List of all current HomeWorks in HomeWorksCoreData
-    private var homeworks: FetchedResults<HomeWorkCoreData>
+    private var subjects: FetchedResults<SubjectsData>
     
     /// Check if the AddHomeWorkView is open
     @State private var isAddButtonClicking: Bool = false
@@ -22,28 +23,27 @@ struct WorkListView: View {
     @State private var showAlert = false
     
     var body: some View {
-        NavigationView {
             VStack {
                 List {
-                    if self.homeworks.isEmpty {
-                        Text("Keine Hausaufgaben eingetragen!")
+                    if self.subjects.isEmpty {
+                        Text("Keine Fächer eingetragen!")
                     }
                     
-                    ForEach(homeworks) { homework in
-                        Section(header: Text(homework.subject!)) {
-                            HomeWorkDetail(homework: homework)
+                    ForEach(subjects) { subject in
+                        VStack {
+                            Text(subject.name ?? "Undefined")
                         }
                     }
-                    .onDelete(perform: deleteHomeWork(offsets:))
+                    .onDelete(perform: deleteSubjects(offsets:))
                 }
                 .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive)).animation(Animation.spring())
                 .listStyle(PlainListStyle())
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         if !isEditing {
-                            NavigationLink(destination: AddHomeWorkView(), isActive: $isAddButtonClicking, label: {
+                            NavigationLink(destination: AddSubjectView(), isActive: $isAddButtonClicking, label: {
                                 VStack {
-                                    Text("Neue Aufgabe")
+                                    Text("Neues Fach")
                                 }
                             })
             
@@ -54,7 +54,7 @@ struct WorkListView: View {
                         }
                     }
                     ToolbarItem(placement: .navigationBarLeading) {
-                        if !self.homeworks.isEmpty {
+                        if !self.subjects.isEmpty {
                             VStack {
                                 Button(isEditing ? "Fertig" : "Bearbeiten") {
                                     self.isEditing.toggle()
@@ -72,24 +72,23 @@ struct WorkListView: View {
                         ),
                         secondaryButton: .destructive(
                             Text("Löschen"),
-                            action: deleteAllHomeWorks
+                            action: deleteAllSubjects
                         )
                     )
                 }
                 
-                .navigationTitle("Hausaufgaben")
+                .navigationTitle("Fächer")
             } .onAppear {
                     self.isAddButtonClicking = false
 
             }
             
             Spacer()
-        }
     }
     
     /// Delete all HomeWorks they saved in HomeWorkCoreData
-    private func deleteAllHomeWorks() {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "HomeWorkCoreData")
+    private func deleteAllSubjects() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SubjectsData")
         
         fetchRequest.includesPropertyValues = false
         
@@ -121,10 +120,10 @@ struct WorkListView: View {
     
     /// To delete one HomeWork
     /// - Parameter offsets: To get the current HomeWork
-    func deleteHomeWork(offsets: IndexSet) {
+    func deleteSubjects(offsets: IndexSet) {
         withAnimation {
             offsets.map {
-                homeworks[$0]
+                subjects[$0]
             }.forEach(viewContext.delete)
             
             let generator = UINotificationFeedbackGenerator()
@@ -135,67 +134,10 @@ struct WorkListView: View {
     }
 }
 
-struct WorkListView_Previews: PreviewProvider {
+struct SubjectListView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkListView()
+        SubjectListView()
+            .preferredColorScheme(.light)
             .previewDevice("iPhone 12 Pro")
     }
 }
-
-/// The detail view of one HomeWork in the list
-struct HomeWorkDetail: View {
-    var homework: HomeWorkCoreData
-    var body: some View {
-        NavigationLink(destination: WorkDetailView(homework: homework)) {
-            
-            VStack(alignment: .leading) {
-                Text(homework.name ?? "Undefined")
-                
-                Text("Bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateEnd()))")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            }
-        }
-    }
-    
-    /// To get the current Hour and Minutes of the Date
-    /// - Parameter date: The date that will be converted
-    /// - Returns: The converted Date in HH:MM
-    func checkTime(date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "nl_NL")
-        formatter.setLocalizedDateFormatFromTemplate("HH:mm")
-        formatter.timeZone = TimeZone(abbreviation: TimeZone.current.abbreviation() ?? "UTC") // Eastern Standard Time
-        
-        let dateString = formatter.string(from: date)
-        return dateString
-    }
-    
-    /// To get the end Date
-    /// - Returns: The name of the day
-    func checkDateEnd() -> String {
-        let calender = Calendar.current
-        
-        if homework.timeEnd ?? Date() < Date()  {
-            if calender.isDateInToday(homework.timeEnd ?? Date()) {
-                return "Heute Abgelaufen"
-            } else if calender.isDateInYesterday(homework.timeEnd ?? Date()) {
-                return "Gestern Abgelaufen"
-            } else {
-                return "Abgelaufen"
-            }
-        }
-        
-        if calender.isDateInToday(homework.timeEnd ?? Date()) {
-            return "Heute"
-        } else if calender.isDateInTomorrow(homework.timeEnd ?? Date()) {
-            return "Morgen"
-        } else if calender.isDateInWeekend(homework.timeEnd ?? Date()) {
-            return "In dieser Woche"
-        } else {
-            return "Bald"
-        }
-    }
-}
-
-
