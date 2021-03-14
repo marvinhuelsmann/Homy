@@ -35,25 +35,12 @@ struct SubjectListView: View {
                         }
                     }
                     .onDelete(perform: deleteSubjects(offsets:))
+                    
                 }
                 .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive)).animation(Animation.spring())
                 .listStyle(PlainListStyle())
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        if !isEditing {
-                            NavigationLink(destination: AddSubjectView(), isActive: $isAddButtonClicking, label: {
-                                VStack {
-                                    Text("Neues Fach")
-                                }
-                            })
-            
-                        } else {
-                            Button("Alle löschen") {
-                                self.showAlert = true
-                            }
-                        }
-                    }
-                    ToolbarItem(placement: .navigationBarLeading) {
                         if !self.subjects.isEmpty {
                             VStack {
                                 Button(isEditing ? "Fertig" : "Bearbeiten") {
@@ -76,6 +63,22 @@ struct SubjectListView: View {
                         )
                     )
                 }
+                
+                NavigationLink(destination: AddSubjectView(), isActive: $isAddButtonClicking, label: {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        Text("Weiteres Fach hinzufügen")
+                        .foregroundColor(.white)
+                        Spacer()
+                    }
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(5)
+                    .shadow(radius: 4)
+                    .padding()
+                })
+                
+                
                 
                 .navigationTitle("Fächer")
             } .onAppear {

@@ -92,7 +92,6 @@ struct AddSubjectView: View {
     
     /// Add a new Subject with the data from the form
     func makeSubject() {
-    
         
         let newSubject = SubjectsData(context: viewContext)
         newSubject.name = self.name

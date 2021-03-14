@@ -10,6 +10,7 @@ import LocalAuthentication
 
 struct TabItemView: View {
     @State private var isUnlocked = false
+    @State private var showInformationsView = !SettingsView().firstAppOpen
     
     var body: some View {
         
@@ -43,6 +44,11 @@ struct TabItemView: View {
             }
         }
         .onAppear(perform: authenticate)
+        .sheet(isPresented: $showInformationsView, content: {
+            InformationsView()
+        }).onAppear(perform: {
+            SettingsView().firstAppOpen = true
+        })
         
     }
     

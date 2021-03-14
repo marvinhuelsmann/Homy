@@ -12,6 +12,9 @@ struct SettingsView: View {
     /// AppSettings
     @AppStorage("secureOnLogin") var requiredPasswordIdOnLogin = false
     @AppStorage("notifications") var allowNotifications = true
+    @AppStorage("firstAppOpen") var firstAppOpen = false
+    
+    @State private var showSubjectView = false
 
     var body: some View {
         
@@ -30,6 +33,9 @@ struct SettingsView: View {
                     NavigationLink(destination: SubjectListView()) {
                         VStack {
                             Text("Fächer")
+                        }
+                        .onTapGesture {
+                            showSubjectView = true
                         }
                     }
                     
