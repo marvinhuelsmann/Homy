@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		4B0A47B325E1D845008B7431 /* LongTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A47B225E1D845008B7431 /* LongTextView.swift */; };
 		4B0A47B425E1D845008B7431 /* LongTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A47B225E1D845008B7431 /* LongTextView.swift */; };
-		4B1BE04425DDBD8500F26CBA /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04225DDBD8500F26CBA /* Data.xcdatamodeld */; };
+		4B0E522325FD94F4009D63CD /* AddSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E522225FD94F4009D63CD /* AddSubjectView.swift */; };
+		4B0E522425FD94F4009D63CD /* AddSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E522225FD94F4009D63CD /* AddSubjectView.swift */; };
+		4B0E522D25FD9546009D63CD /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E522B25FD9546009D63CD /* Data.xcdatamodeld */; };
+		4B0E522E25FD9546009D63CD /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E522B25FD9546009D63CD /* Data.xcdatamodeld */; };
 		4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B2FFD0425EEF1E20031FFAA /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */; };
@@ -22,8 +25,6 @@
 		4B3B1CB625CF5C2100E01BFE /* WorkWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4B3B47F425E1AAB100741B6B /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47F325E1AAB100741B6B /* TabItemView.swift */; };
 		4B3B47F525E1AAB100741B6B /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47F325E1AAB100741B6B /* TabItemView.swift */; };
-		4B3B47FD25E1AE3900741B6B /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47FC25E1AE3900741B6B /* NewsView.swift */; };
-		4B3B47FE25E1AE3900741B6B /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47FC25E1AE3900741B6B /* NewsView.swift */; };
 		4B3B480625E1B4EB00741B6B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B480525E1B4EB00741B6B /* CardView.swift */; };
 		4B3B480725E1B4EB00741B6B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B480525E1B4EB00741B6B /* CardView.swift */; };
 		4B6508F725AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */; };
@@ -33,8 +34,8 @@
 		4B6508FB25AF31A400FEA20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6508E625AF31A400FEA20A /* Assets.xcassets */; };
 		4B6508FC25AF31A400FEA20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6508E625AF31A400FEA20A /* Assets.xcassets */; };
 		4B65090F25AF324500FEA20A /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65090E25AF324500FEA20A /* Subjects.swift */; };
-		4B8A6D1225F9703100079852 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A6D1125F9703100079852 /* AppDesign.swift */; };
-		4B8A6D1325F9703100079852 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A6D1125F9703100079852 /* AppDesign.swift */; };
+		4B8A6D1825FD84F900079852 /* BioMetricType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A6D1725FD84F800079852 /* BioMetricType.swift */; };
+		4B8A6D1925FD84F900079852 /* BioMetricType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A6D1725FD84F800079852 /* BioMetricType.swift */; };
 		4B8CFDD725F17C9700F615E1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CFDD625F17C9700F615E1 /* ProfileView.swift */; };
 		4B8CFDD825F17C9700F615E1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CFDD625F17C9700F615E1 /* ProfileView.swift */; };
 		4BCD197925F189FE006A8D3E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD197825F189FE006A8D3E /* SettingsView.swift */; };
@@ -72,7 +73,8 @@
 
 /* Begin PBXFileReference section */
 		4B0A47B225E1D845008B7431 /* LongTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextView.swift; sourceTree = "<group>"; };
-		4B1BE04325DDBD8500F26CBA /* HomeWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork.xcdatamodel; sourceTree = "<group>"; };
+		4B0E522225FD94F4009D63CD /* AddSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectView.swift; sourceTree = "<group>"; };
+		4B0E522C25FD9546009D63CD /* HomeWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork.xcdatamodel; sourceTree = "<group>"; };
 		4B1BE04B25DDC04A00F26CBA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorkWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +85,6 @@
 		4B3B1CAF25CF5C2100E01BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3B1CB125CF5C2100E01BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3B47F325E1AAB100741B6B /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
-		4B3B47FC25E1AE3900741B6B /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		4B3B480525E1B4EB00741B6B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkPlannerApp.swift; sourceTree = "<group>"; };
 		4B6508E525AF31A300FEA20A /* WorkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView.swift; sourceTree = "<group>"; };
@@ -94,7 +95,7 @@
 		4B6508F525AF31A400FEA20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B6508F625AF31A400FEA20A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		4B65090E25AF324500FEA20A /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
-		4B8A6D1125F9703100079852 /* AppDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
+		4B8A6D1725FD84F800079852 /* BioMetricType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMetricType.swift; sourceTree = "<group>"; };
 		4B8CFDD625F17C9700F615E1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4BCD197825F189FE006A8D3E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeWorkView.swift; sourceTree = "<group>"; };
@@ -166,13 +167,13 @@
 				4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */,
 				4BDE378D25AF3EED00158395 /* Meta */,
 				4B6508E525AF31A300FEA20A /* WorkListView.swift */,
-				4B3B47FC25E1AE3900741B6B /* NewsView.swift */,
 				4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */,
 				4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */,
+				4B0E522225FD94F4009D63CD /* AddSubjectView.swift */,
 				4B8CFDD625F17C9700F615E1 /* ProfileView.swift */,
 				4BCD197825F189FE006A8D3E /* SettingsView.swift */,
+				4B0E522B25FD9546009D63CD /* Data.xcdatamodeld */,
 				4B6508E625AF31A400FEA20A /* Assets.xcassets */,
-				4B1BE04225DDBD8500F26CBA /* Data.xcdatamodeld */,
 				4B1BE04B25DDC04A00F26CBA /* Persistence.swift */,
 			);
 			path = Shared;
@@ -213,7 +214,7 @@
 				4B3B47F325E1AAB100741B6B /* TabItemView.swift */,
 				4B3B480525E1B4EB00741B6B /* CardView.swift */,
 				4B0A47B225E1D845008B7431 /* LongTextView.swift */,
-				4B8A6D1125F9703100079852 /* AppDesign.swift */,
+				4B8A6D1725FD84F800079852 /* BioMetricType.swift */,
 			);
 			path = Meta;
 			sourceTree = "<group>";
@@ -357,18 +358,18 @@
 			files = (
 				4B2FFD0425EEF1E20031FFAA /* NotificationHandler.swift in Sources */,
 				4B65090F25AF324500FEA20A /* Subjects.swift in Sources */,
-				4B1BE04425DDBD8500F26CBA /* Data.xcdatamodeld in Sources */,
 				4BCD197925F189FE006A8D3E /* SettingsView.swift in Sources */,
+				4B0E522D25FD9546009D63CD /* Data.xcdatamodeld in Sources */,
 				4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
-				4B8A6D1225F9703100079852 /* AppDesign.swift in Sources */,
-				4B3B47FD25E1AE3900741B6B /* NewsView.swift in Sources */,
 				4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */,
 				4B6508F925AF31A400FEA20A /* WorkListView.swift in Sources */,
 				4BFE4AE725AF3797009E0126 /* WorkDetailView.swift in Sources */,
 				4B8CFDD725F17C9700F615E1 /* ProfileView.swift in Sources */,
 				4B6508F725AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
+				4B8A6D1825FD84F900079852 /* BioMetricType.swift in Sources */,
 				4B3B47F425E1AAB100741B6B /* TabItemView.swift in Sources */,
 				4B3B480625E1B4EB00741B6B /* CardView.swift in Sources */,
+				4B0E522325FD94F4009D63CD /* AddSubjectView.swift in Sources */,
 				4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */,
 				4B0A47B325E1D845008B7431 /* LongTextView.swift in Sources */,
 			);
@@ -380,14 +381,15 @@
 			files = (
 				4B6508FA25AF31A400FEA20A /* WorkListView.swift in Sources */,
 				4B3B480725E1B4EB00741B6B /* CardView.swift in Sources */,
+				4B0E522425FD94F4009D63CD /* AddSubjectView.swift in Sources */,
 				4B0A47B425E1D845008B7431 /* LongTextView.swift in Sources */,
-				4B3B47FE25E1AE3900741B6B /* NewsView.swift in Sources */,
 				4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */,
+				4B0E522E25FD9546009D63CD /* Data.xcdatamodeld in Sources */,
 				4BEDFB5F25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
 				4BFE4AE825AF3797009E0126 /* WorkDetailView.swift in Sources */,
 				4B3B47F525E1AAB100741B6B /* TabItemView.swift in Sources */,
-				4B8A6D1325F9703100079852 /* AppDesign.swift in Sources */,
 				4B6508F825AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
+				4B8A6D1925FD84F900079852 /* BioMetricType.swift in Sources */,
 				4BCD197A25F189FE006A8D3E /* SettingsView.swift in Sources */,
 				4B8CFDD825F17C9700F615E1 /* ProfileView.swift in Sources */,
 				4BDE378E25AF3EF800158395 /* Subjects.swift in Sources */,
@@ -702,12 +704,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4B1BE04225DDBD8500F26CBA /* Data.xcdatamodeld */ = {
+		4B0E522B25FD9546009D63CD /* Data.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4B1BE04325DDBD8500F26CBA /* HomeWork.xcdatamodel */,
+				4B0E522C25FD9546009D63CD /* HomeWork.xcdatamodel */,
 			);
-			currentVersion = 4B1BE04325DDBD8500F26CBA /* HomeWork.xcdatamodel */;
+			currentVersion = 4B0E522C25FD9546009D63CD /* HomeWork.xcdatamodel */;
 			path = Data.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

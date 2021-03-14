@@ -22,12 +22,6 @@ struct TabItemView: View {
                             Text("Hausaufgaben")
                         }
                     
-//                    NewsView()
-//                        .tabItem {
-//                            Image(systemName: "network")
-//                            Text("Neuigkeiten")
-//                        }
-                    
                     ProfileView()
                         .tabItem {
                             Image(systemName: "person")
@@ -39,7 +33,7 @@ struct TabItemView: View {
                 Text("Passwortschutz")
                     .bold()
                     .font(.largeTitle)
-                Text("Deine Daten sind mit FaceID geschütz. Um auf die Daten zu greifen zu können musst du dich mit FaceID identifizieren.")
+                Text("Deine Daten sind mit \(getBiometricTypeName()) geschütz. Um auf die Daten zu greifen zu können musst du dich mit FaceID identifizieren.")
                     .padding(.trailing)
                     .padding(.leading)
                     
@@ -58,7 +52,7 @@ struct TabItemView: View {
             var error: NSError?
             
             if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-                let reason = "Um deine Daten anzeigen zu lassen."
+                let reason = "Um deine gespeicherten Hausaufgaben anzeigen zu lassen."
                 
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                     DispatchQueue.main.async {

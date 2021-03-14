@@ -37,5 +37,6 @@ struct LongTextView: View {
 struct LongTextView_Previews: PreviewProvider {
     static var previews: some View {
         LongTextView(title: "Test", upNote: "Test Note", longText: "This is a long text.")
+            .preferredColorScheme(.dark)
     }
 }
