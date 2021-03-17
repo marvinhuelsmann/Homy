@@ -13,8 +13,6 @@ struct SettingsView: View {
     @AppStorage("secureOnLogin") var requiredPasswordIdOnLogin = false
     @AppStorage("notifications") var allowNotifications = true
     @AppStorage("firstAppOpen") var firstAppOpen = false
-    
-    @State private var showSubjectView = false
 
     var body: some View {
         
@@ -28,20 +26,7 @@ struct SettingsView: View {
                 Section(footer: Text("Erhalte Töne wenn du deine Aufgabe den Abgabe Termin erreicht.")) {
                     Toggle("Benachrichtigung", isOn: $allowNotifications)
                 }
-                
-                Section(footer: Text("Erstelle ein neues Fach um es deinen Hausaufgaben zu teilen zu könne.")) {
-                    NavigationLink(destination: SubjectListView()) {
-                        VStack {
-                            Text("Fächer")
-                        }
-                        .onTapGesture {
-                            showSubjectView = true
-                        }
-                    }
-                    
-                }
-                
-                
+
             }
         }
     }

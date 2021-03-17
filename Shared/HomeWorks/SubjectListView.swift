@@ -23,6 +23,7 @@ struct SubjectListView: View {
     @State private var showAlert = false
     
     var body: some View {
+        NavigationView {
             VStack {
                 List {
                     if self.subjects.isEmpty {
@@ -41,6 +42,22 @@ struct SubjectListView: View {
                 .listStyle(PlainListStyle())
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarTrailing) {
+                        if !isEditing {
+                            NavigationLink(destination: AddSubjectView(), isActive: $isAddButtonClicking, label: {
+                                VStack {
+                                    Text("Neues Fach")
+                                }
+                            }).onTapGesture {
+                                isAddButtonClicking = true
+                            }
+                            
+                        } else {
+                            Button("Alle löschen") {
+                                self.showAlert = true
+                            }
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
                         if !self.subjects.isEmpty {
                             VStack {
                                 Button(isEditing ? "Fertig" : "Bearbeiten") {
@@ -63,30 +80,18 @@ struct SubjectListView: View {
                         )
                     )
                 }
+            }
+            .navigationTitle("Fächer")
+            .onAppear {
+                self.isAddButtonClicking = false
                 
-                NavigationLink(destination: AddSubjectView(), isActive: $isAddButtonClicking, label: {
-                    HStack(alignment: .center) {
-                        Spacer()
-                        Text("Weiteres Fach hinzufügen")
-                        .foregroundColor(.white)
-                        Spacer()
-                    }
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(5)
-                    .shadow(radius: 4)
-                    .padding()
-                })
-                
-                
-                
-                .navigationTitle("Fächer")
-            } .onAppear {
-                    self.isAddButtonClicking = false
-
             }
             
+            
             Spacer()
+            
+            
+        }
     }
     
     /// Delete all HomeWorks they saved in HomeWorkCoreData
@@ -101,7 +106,7 @@ struct SubjectListView: View {
             for item in items {
                 viewContext.delete(item)
             }
-    
+            
             saveContext()
             self.isEditing = false
             

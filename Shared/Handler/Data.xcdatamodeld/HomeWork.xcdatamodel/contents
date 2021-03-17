@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FinishWorkData" representedClassName="FinishWorkData" syncable="YES" codeGenerationType="class">
+        <attribute name="isFinish" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="link" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notice" optional="YES" attributeType="String"/>
+        <attribute name="subject" optional="YES" attributeType="String"/>
+        <attribute name="timeEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
     <entity name="HomeWorkCoreData" representedClassName="HomeWorkCoreData" syncable="YES" codeGenerationType="class">
         <attribute name="link" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -12,6 +20,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
+        <element name="FinishWorkData" positionX="-45" positionY="27" width="128" height="119"/>
         <element name="HomeWorkCoreData" positionX="-63" positionY="-18" width="128" height="119"/>
         <element name="SubjectsData" positionX="-36" positionY="45" width="128" height="44"/>
     </elements>

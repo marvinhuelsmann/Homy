@@ -9,6 +9,11 @@ import SwiftUI
 
 struct WorkDetailView: View {
     var homework: HomeWorkCoreData
+    var finishHomeWork: FinishWorkData  
+    
+    @FetchRequest(sortDescriptors: [])
+    /// List of all current HomeWorks in FinishWorkData
+    private var finishHomeWorks: FetchedResults<FinishWorkData>
     
     @State var showDeleteAlert: Bool = false
     
@@ -24,7 +29,7 @@ struct WorkDetailView: View {
                         .font(.largeTitle)
                         .bold()
                     
-                    Text("\(checkDate()) bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateName(date: homework.timeEnd ?? Date())))")
+                    Text("\(checkDate()), bis \(checkTime(date: homework.timeEnd ?? Date())) (\(checkDateName(date: homework.timeEnd ?? Date())))")
                         .foregroundColor(.secondary)
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
@@ -99,7 +104,7 @@ struct WorkDetailView: View {
                 .alert(isPresented: $showDeleteAlert) {
                     Alert(
                         title: Text("Bist du sicher?"),
-                        message: Text("Diese Aufgabe wird von deiner Liste gelöscht!"),
+                        message: Text("Diese Aufgabe wird von deiner Liste gelöscht und in die fertige Aufgaben Liste geschoben."),
                         primaryButton: .default(
                             Text("Abbrechen")
                         ),
@@ -113,8 +118,8 @@ struct WorkDetailView: View {
                     showDeleteAlert = true
                 }
                 
-     
-             Spacer()
+                
+                Spacer()
                 
             }
         }
@@ -137,6 +142,10 @@ struct WorkDetailView: View {
         
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.error)
+        
+        viewContext.performAndWait {
+            finishHomeWork.isFinish  = true
+        }
         
         saveContext()
         mode.wrappedValue.dismiss()

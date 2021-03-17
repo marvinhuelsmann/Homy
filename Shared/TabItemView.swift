@@ -23,6 +23,12 @@ struct TabItemView: View {
                             Text("Hausaufgaben")
                         }
                     
+                    SubjectListView()
+                        .tabItem {
+                            Image(systemName: "text.book.closed")
+                            Text("Fächer")
+                        }
+                    
                     ProfileView()
                         .tabItem {
                             Image(systemName: "person")
@@ -34,7 +40,7 @@ struct TabItemView: View {
                 Text("Passwortschutz")
                     .bold()
                     .font(.largeTitle)
-                Text("Deine Daten sind mit \(getBiometricTypeName()) geschütz. Um auf die Daten zu greifen zu können musst du dich mit FaceID identifizieren.")
+                Text("Deine Daten sind mit \(getBiometricTypeName()) geschützt. Um auf die Daten zu greifen zu können musst du dich mit FaceID identifizieren.")
                     .padding(.trailing)
                     .padding(.leading)
                     

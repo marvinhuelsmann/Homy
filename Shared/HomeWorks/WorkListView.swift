@@ -14,6 +14,10 @@ struct WorkListView: View {
     /// List of all current HomeWorks in HomeWorksCoreData
     private var homeworks: FetchedResults<HomeWorkCoreData>
     
+    @FetchRequest(sortDescriptors: [])
+    /// List of all current HomeWorks in FinishWorkData
+    private var finishHomeWorks: FetchedResults<FinishWorkData>
+    
     /// Check if the AddHomeWorkView is open
     @State private var isAddButtonClicking: Bool = false
     
@@ -22,68 +26,85 @@ struct WorkListView: View {
     @State private var showAlert = false
     
     var body: some View {
-        NavigationView {
-            VStack {
-                List {
-                    if self.homeworks.isEmpty {
-                        Text("Keine Hausaufgaben eingetragen!")
+        VStack {
+            NavigationView {
+                VStack {
+                    List {
+                        if self.homeworks.isEmpty {
+                            Text("Keine Hausaufgaben eingetragen!")
+                        }
+                        
+                        ForEach(homeworks) { homework in
+                            Section(header: Text(homework.subject!)) {
+                                ForEach(finishHomeWorks) { finishHomeWork in
+                                    if finishHomeWork.name == homework.name && finishHomeWork.timeEnd == homework.timeEnd {
+                                    HomeWorkDetail(homework: homework, finishHomeWork: finishHomeWork)
+                                    }
+                                }
+                                
+                            }
+                        }
+                        .onDelete(perform: deleteHomeWork(offsets:))
+                    }
+                    .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive)).animation(Animation.spring())
+                    .listStyle(PlainListStyle())
+                    .toolbar(content: {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            if !isEditing {
+                                NavigationLink(destination: AddHomeWorkView(), isActive: $isAddButtonClicking, label: {
+                                    VStack {
+                                        HStack {
+                                            Text("Neue Aufgabe")
+                                        }.onTapGesture {
+                                            self.isAddButtonClicking = true
+                                        }
+                                    }
+                                })
+                            } else {
+                                Button("Alle löschen") {
+                                    self.showAlert = true
+                                }
+                            }
+                        }
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            if !self.homeworks.isEmpty {
+                                VStack {
+                                    Button(action: {
+                                        self.isEditing.toggle()
+                                    }, label: {
+                                        VStack {
+                                            Text(isEditing ? "Fertig" : "Bearbeiten")
+                                                .foregroundColor(.red)
+                                                .bold()
+                                        }
+                                    })
+                                }.foregroundColor(.red)
+                                
+                            }
+                        }
+                    })
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Bist du sicher?"),
+                            message: Text("Du löscht alle deine gespeicherten Hausaufgaben. Sie werden dann in den Fertigen Augaben geschoben."),
+                            primaryButton: .default(
+                                Text("Abbrechen")
+                            ),
+                            secondaryButton: .destructive(
+                                Text("Löschen"),
+                                action: deleteAllHomeWorks
+                            )
+                        )
                     }
                     
-                    ForEach(homeworks) { homework in
-                        Section(header: Text(homework.subject!)) {
-                            HomeWorkDetail(homework: homework)
-                        }
-                    }
-                    .onDelete(perform: deleteHomeWork(offsets:))
-                }
-                .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive)).animation(Animation.spring())
-                .listStyle(PlainListStyle())
-                .toolbar(content: {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        if !isEditing {
-                            NavigationLink(destination: AddHomeWorkView(), isActive: $isAddButtonClicking, label: {
-                                VStack {
-                                    Text("Neue Aufgabe")
-                                }
-                            })
-            
-                        } else {
-                            Button("Alle löschen") {
-                                self.showAlert = true
-                            }
-                        }
-                    }
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        if !self.homeworks.isEmpty {
-                            VStack {
-                                Button(isEditing ? "Fertig" : "Bearbeiten") {
-                                    self.isEditing.toggle()
-                                }
-                            }
-                        }
-                    }
-                })
-                .alert(isPresented: $showAlert) {
-                    Alert(
-                        title: Text("Bist du sicher?"),
-                        message: Text("Du löscht alle deine gespeicherten Hausaufgaben. Du kannst diesen Schritt nicht mehr rückgänging machen!"),
-                        primaryButton: .default(
-                            Text("Abbrechen")
-                        ),
-                        secondaryButton: .destructive(
-                            Text("Löschen"),
-                            action: deleteAllHomeWorks
-                        )
-                    )
+                    .navigationTitle("Hausaufgaben")
+                }.onAppear {
+                    self.isAddButtonClicking = false
+                    
                 }
                 
-                .navigationTitle("Hausaufgaben")
-            } .onAppear {
-                    self.isAddButtonClicking = false
-
             }
-            
-            Spacer()
+     
         }
     }
     
@@ -99,7 +120,7 @@ struct WorkListView: View {
             for item in items {
                 viewContext.delete(item)
             }
-    
+            
             saveContext()
             self.isEditing = false
             
@@ -145,8 +166,9 @@ struct WorkListView_Previews: PreviewProvider {
 /// The detail view of one HomeWork in the list
 struct HomeWorkDetail: View {
     var homework: HomeWorkCoreData
+    var finishHomeWork: FinishWorkData
     var body: some View {
-        NavigationLink(destination: WorkDetailView(homework: homework)) {
+        NavigationLink(destination: WorkDetailView(homework: homework, finishHomeWork: finishHomeWork)) {
             
             VStack(alignment: .leading) {
                 Text(homework.name ?? "Undefined")

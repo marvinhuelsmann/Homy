@@ -9,11 +9,7 @@ import SwiftUI
 
 struct AddSubjectView: View {
     
-    init() {
-        if colorScheme == .dark {
-            UITableView.appearance().backgroundColor = .clear
-        }
-    }
+
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Environment(\.managedObjectContext) private var viewContext
@@ -88,6 +84,8 @@ struct AddSubjectView: View {
             let error = error as NSError
             fatalError("Unresolved Error: \(error)")
         }
+        
+        mode.wrappedValue.dismiss()
     }
     
     /// Add a new Subject with the data from the form

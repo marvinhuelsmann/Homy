@@ -13,7 +13,9 @@ struct ProfileView: View {
         NavigationView {
    
             VStack {
-                CardView(color: Color.red, headLine: "Was ist Homy", bodyText: "Homy ist einer der leistungsstärksten Apps die es in der Kategorie lernen gibt.", desitination: AnyView(AddHomeWorkView()))
+                CardView(color: Color.green, headLine: "Fertige Aufgaben", bodyText: "Hier siehst du alle Aufgaben die du als erledigt markiert hast oder gelöscht hast.", desitination: AnyView(FinishHomeWorkView()))
+                    .padding(.trailing, 3)
+                    .padding(.leading, 3)
                 
                 Spacer()
             }

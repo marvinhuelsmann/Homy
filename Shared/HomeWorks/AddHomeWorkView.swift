@@ -28,7 +28,6 @@ struct AddHomeWorkView: View {
         sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]
     )private var subjects: FetchedResults<SubjectsData>
     
-    
     private let generator = UISelectionFeedbackGenerator()
     
     @State private var name: String = ""
@@ -43,14 +42,13 @@ struct AddHomeWorkView: View {
     @ObservedObject var notificationManager = NotificationHandler()
     
     var body: some View {
-        
-        VStack {
+    
             Form {
                 Section(header: Text("Aufgabe*")) {
                     TextField("Arbeitsblatt 4", text: $name)
                     
                     Picker(selection: $subject, label: Text("Fach")) {
-                        
+
                         ForEach(subjects) { subjectObject in
                             Text(subjectObject.name ?? "")
                                 .tag(subjectObject.name as String?)
@@ -58,21 +56,21 @@ struct AddHomeWorkView: View {
                     }
                 }
                 
-                Section(header: Text("Link")) {
+                Section(header: Text("Link"), footer: Text("Der Abgabe Link zu deiner Aufgabe der zu einer Internet Seite weiterleitet.")) {
                     TextField("Schulwebsite Link", text: $link)
                 }
                 
-                Section(header: Text("Notiz")) {
+                Section(header: Text("Notiz"), footer: Text("Aufgaben Beschreibungen oder allgemeine Notizen über deine Hausaufgabe.")) {
                     TextEditor(text: $notice)
                 }
                 
-                Section(header: Text("Zeit*")) {
+                Section(header: Text("Zeit*"), footer: Text("Der endgültige Abgabe Punkt deiner Hausaufgabe.")) {
                     DatePicker("Bis wann?", selection: $timeEnd)
                 }
                 
                 
                 if SettingsView().allowNotifications {
-                    Section(header: Text("Benachrichigung*")) {
+                    Section(header: Text("Benachrichigung*"), footer: Text("Wie viele Minuten vorher du eine Benachrichtigung erhalten willst.")) {
                         TextField("5", text: $notify)
                             .keyboardType(.numberPad)
                             .onReceive(Just(notify)) { newValue in
@@ -104,7 +102,7 @@ struct AddHomeWorkView: View {
                     .cornerRadius(5)
                     .shadow(radius: 4)
                     .padding()
-                    
+
                     if !fillInAll {
                         HStack {
                             Spacer()
@@ -117,9 +115,10 @@ struct AddHomeWorkView: View {
                     }
                 }
                 .background(colorScheme == .light ? Color(UIColor.secondarySystemBackground) : Color.black)
-            }
+            
+                
         }
-        .navigationTitle("Neue Aufgabe")
+            .navigationTitle("Neue Aufgabe")
     }
     
     /// Save the Context from the 
@@ -154,6 +153,16 @@ struct AddHomeWorkView: View {
         newHomeWork.link  = self.link
         newHomeWork.notify = self.notify
         
+        
+        let finishHomeWork = FinishWorkData(context: viewContext)
+        finishHomeWork.name = self.name
+        finishHomeWork.subject = self.subject
+        finishHomeWork.notice = self.notice
+        
+        finishHomeWork.timeEnd = self.timeEnd
+        finishHomeWork.link  = self.link
+        finishHomeWork.isFinish = false
+        
         saveContext()
     }
 }
@@ -161,7 +170,5 @@ struct AddHomeWorkView: View {
 struct AddHomeWorkView_Previews: PreviewProvider {
     static var previews: some View {
         AddHomeWorkView()
-            .preferredColorScheme(.light)
-            .previewDevice("iPhone 12 Pro")
     }
 }

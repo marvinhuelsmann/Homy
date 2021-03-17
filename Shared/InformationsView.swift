@@ -116,11 +116,11 @@ extension Color {
 struct InformationContainerView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            InformationDetailView(title: "Aufgaben", subTitle: "Match the gradients by moving the Red, Green and Blue sliders for the left and right colors.", imageName: "list.bullet.rectangle")
+            InformationDetailView(title: "Aufgaben", subTitle: "Mit Homy ist deine Aufgaben Verwaltung und deine Erinnerungen kinderleicht zu bedienen.", imageName: "list.bullet.rectangle")
             
-            InformationDetailView(title: "Benachrichtigungen", subTitle: "More precision with the steppers to get that 100 score.", imageName: "bell")
+            InformationDetailView(title: "Benachrichtigungen", subTitle: "Wenn du willst erinnert dich Homy dann vorher wenn du deine Aufgaben abgeben musst.", imageName: "bell")
             
-            InformationDetailView(title: "Privat", subTitle: "A detailed score and comparsion of your gradient and the target gradient.", imageName: "lock")
+            InformationDetailView(title: "Privat", subTitle: "Homy teilt keine Daten in Clouds. Sie bleiben einzig und alleine auf deinem Gerät gespeichert.", imageName: "lock")
         }
         .padding(.horizontal)
     }
