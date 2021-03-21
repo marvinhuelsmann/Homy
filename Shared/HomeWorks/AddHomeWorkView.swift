@@ -122,7 +122,7 @@ struct AddHomeWorkView: View {
     }
     
     /// Save the Context from the 
-    private func saveContext() {
+    func saveContext() {
         do {
             try viewContext.save()
             self.mode.wrappedValue.dismiss()
@@ -162,8 +162,10 @@ struct AddHomeWorkView: View {
         finishHomeWork.timeEnd = self.timeEnd
         finishHomeWork.link  = self.link
         finishHomeWork.isFinish = false
-        
+
         saveContext()
+        
+        AchievementsHandler().setAchievements(type: AchievementsType.homeWorkList, count: homeworks.count, viewContext: viewContext)
     }
 }
 

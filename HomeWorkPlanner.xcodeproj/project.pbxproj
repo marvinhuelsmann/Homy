@@ -17,6 +17,11 @@
 		4B0E523425FE3E43009D63CD /* SubjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E523225FE3E43009D63CD /* SubjectListView.swift */; };
 		4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
+		4B21AB6B2606C94C00462202 /* AchievementTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB6A2606C94C00462202 /* AchievementTypes.swift */; };
+		4B21AB6C2606C94C00462202 /* AchievementTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB6A2606C94C00462202 /* AchievementTypes.swift */; };
+		4B21AB722606CB6E00462202 /* AchievementsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB712606CB6E00462202 /* AchievementsListView.swift */; };
+		4B21AB7A2607F04D00462202 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB792607F04D00462202 /* AchievementCardView.swift */; };
+		4B21AB7B2607F04D00462202 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB792607F04D00462202 /* AchievementCardView.swift */; };
 		4B2FFD0425EEF1E20031FFAA /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */; };
 		4B3B1CA825CF5C2000E01BFE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */; };
 		4B3B1CAA25CF5C2000E01BFE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA925CF5C2000E01BFE /* SwiftUI.framework */; };
@@ -45,6 +50,8 @@
 		4B8A6D1925FD84F900079852 /* BioMetricType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A6D1725FD84F800079852 /* BioMetricType.swift */; };
 		4B8CFDD725F17C9700F615E1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CFDD625F17C9700F615E1 /* ProfileView.swift */; };
 		4B8CFDD825F17C9700F615E1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CFDD625F17C9700F615E1 /* ProfileView.swift */; };
+		4BA39BFC2606C47E00CA41A4 /* AchievementsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA39BFB2606C47E00CA41A4 /* AchievementsHandler.swift */; };
+		4BA39BFD2606C47E00CA41A4 /* AchievementsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA39BFB2606C47E00CA41A4 /* AchievementsHandler.swift */; };
 		4BCD197925F189FE006A8D3E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD197825F189FE006A8D3E /* SettingsView.swift */; };
 		4BCD197A25F189FE006A8D3E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD197825F189FE006A8D3E /* SettingsView.swift */; };
 		4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */; };
@@ -83,6 +90,9 @@
 		4B0E522C25FD9546009D63CD /* HomeWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork.xcdatamodel; sourceTree = "<group>"; };
 		4B0E523225FE3E43009D63CD /* SubjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectListView.swift; sourceTree = "<group>"; };
 		4B1BE04B25DDC04A00F26CBA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4B21AB6A2606C94C00462202 /* AchievementTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementTypes.swift; sourceTree = "<group>"; };
+		4B21AB712606CB6E00462202 /* AchievementsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsListView.swift; sourceTree = "<group>"; };
+		4B21AB792607F04D00462202 /* AchievementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCardView.swift; sourceTree = "<group>"; };
 		4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorkWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +116,7 @@
 		4B6508F625AF31A400FEA20A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		4B8A6D1725FD84F800079852 /* BioMetricType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMetricType.swift; sourceTree = "<group>"; };
 		4B8CFDD625F17C9700F615E1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4BA39BFB2606C47E00CA41A4 /* AchievementsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsHandler.swift; sourceTree = "<group>"; };
 		4BCD197825F189FE006A8D3E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4BEDFB5D25AF6D8100FABA36 /* AddHomeWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeWorkView.swift; sourceTree = "<group>"; };
 		4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailView.swift; sourceTree = "<group>"; };
@@ -138,6 +149,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B21AB702606CB5500462202 /* Achivements */ = {
+			isa = PBXGroup;
+			children = (
+				4B21AB712606CB6E00462202 /* AchievementsListView.swift */,
+			);
+			path = Achivements;
+			sourceTree = "<group>";
+		};
 		4B3B1CA625CF5C2000E01BFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +183,7 @@
 				4B3B480525E1B4EB00741B6B /* CardView.swift */,
 				4B0A47B225E1D845008B7431 /* LongTextView.swift */,
 				4B3D1B3325FE993300B48135 /* InformationsView.swift */,
+				4B21AB792607F04D00462202 /* AchievementCardView.swift */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -171,6 +191,7 @@
 		4B3D1B4625FFAC2C00B48135 /* HomeWorks */ = {
 			isa = PBXGroup;
 			children = (
+				4B21AB702606CB5500462202 /* Achivements */,
 				4B649F3626013B5D00CE1F61 /* Archive */,
 				4B6508E525AF31A300FEA20A /* WorkListView.swift */,
 				4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */,
@@ -259,6 +280,8 @@
 				4B8A6D1725FD84F800079852 /* BioMetricType.swift */,
 				4B0E522B25FD9546009D63CD /* Data.xcdatamodeld */,
 				4B1BE04B25DDC04A00F26CBA /* Persistence.swift */,
+				4BA39BFB2606C47E00CA41A4 /* AchievementsHandler.swift */,
+				4B21AB6A2606C94C00462202 /* AchievementTypes.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -402,12 +425,14 @@
 			files = (
 				4B2FFD0425EEF1E20031FFAA /* NotificationHandler.swift in Sources */,
 				4BCD197925F189FE006A8D3E /* SettingsView.swift in Sources */,
+				4B21AB722606CB6E00462202 /* AchievementsListView.swift in Sources */,
 				4B649F2E26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */,
 				4B649F3826013B7500CE1F61 /* FinishWorkDetailView.swift in Sources */,
 				4B3D1B3425FE993300B48135 /* InformationsView.swift in Sources */,
 				4B0E522D25FD9546009D63CD /* Data.xcdatamodeld in Sources */,
 				4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
 				4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */,
+				4BA39BFC2606C47E00CA41A4 /* AchievementsHandler.swift in Sources */,
 				4B6508F925AF31A400FEA20A /* WorkListView.swift in Sources */,
 				4BFE4AE725AF3797009E0126 /* WorkDetailView.swift in Sources */,
 				4B8CFDD725F17C9700F615E1 /* ProfileView.swift in Sources */,
@@ -415,7 +440,9 @@
 				4B8A6D1825FD84F900079852 /* BioMetricType.swift in Sources */,
 				4B3B47F425E1AAB100741B6B /* TabItemView.swift in Sources */,
 				4B3B480625E1B4EB00741B6B /* CardView.swift in Sources */,
+				4B21AB7A2607F04D00462202 /* AchievementCardView.swift in Sources */,
 				4B0E522325FD94F4009D63CD /* AddSubjectView.swift in Sources */,
+				4B21AB6B2606C94C00462202 /* AchievementTypes.swift in Sources */,
 				4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */,
 				4B0E523325FE3E43009D63CD /* SubjectListView.swift in Sources */,
 				4B0A47B325E1D845008B7431 /* LongTextView.swift in Sources */,
@@ -427,12 +454,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B6508FA25AF31A400FEA20A /* WorkListView.swift in Sources */,
+				4BA39BFD2606C47E00CA41A4 /* AchievementsHandler.swift in Sources */,
 				4B3B480725E1B4EB00741B6B /* CardView.swift in Sources */,
 				4B649F3926013B7500CE1F61 /* FinishWorkDetailView.swift in Sources */,
 				4B0E522425FD94F4009D63CD /* AddSubjectView.swift in Sources */,
 				4B0A47B425E1D845008B7431 /* LongTextView.swift in Sources */,
 				4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */,
 				4B3D1B3525FE993300B48135 /* InformationsView.swift in Sources */,
+				4B21AB6C2606C94C00462202 /* AchievementTypes.swift in Sources */,
+				4B21AB7B2607F04D00462202 /* AchievementCardView.swift in Sources */,
 				4B0E522E25FD9546009D63CD /* Data.xcdatamodeld in Sources */,
 				4BEDFB5F25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
 				4BFE4AE825AF3797009E0126 /* WorkDetailView.swift in Sources */,

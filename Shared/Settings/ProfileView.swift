@@ -17,6 +17,11 @@ struct ProfileView: View {
                     .padding(.trailing, 3)
                     .padding(.leading, 3)
                 
+                CardView(color: Color.blue, headLine: "Erfolge", bodyText: "Sehe dir deine Homy Erfolge an und lass dich feiern und bejubeln.", desitination: AnyView(AchievementsListView()))
+                    .padding(.trailing, 15)
+                    .padding(.leading, 15)
+                    .padding(.top, 10)
+                
                 Spacer()
             }
             

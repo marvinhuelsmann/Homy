@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct AddSubjectView: View {
-    
-
-    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.colorScheme) var colorScheme
@@ -95,6 +92,8 @@ struct AddSubjectView: View {
         newSubject.name = self.name
         
         saveContext()
+        
+        AchievementsHandler().setAchievements(type: AchievementsType.subjects, count: subjects.count, viewContext: viewContext)
     }
 }
 
