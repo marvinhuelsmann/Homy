@@ -17,6 +17,7 @@
 		4B0E523425FE3E43009D63CD /* SubjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E523225FE3E43009D63CD /* SubjectListView.swift */; };
 		4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
+		4B1C37F0260BDAA3005BEC4E /* DayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C37EF260BDAA3005BEC4E /* DayDetailView.swift */; };
 		4B21AB6B2606C94C00462202 /* AchievementTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB6A2606C94C00462202 /* AchievementTypes.swift */; };
 		4B21AB6C2606C94C00462202 /* AchievementTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB6A2606C94C00462202 /* AchievementTypes.swift */; };
 		4B21AB722606CB6E00462202 /* AchievementsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB712606CB6E00462202 /* AchievementsListView.swift */; };
@@ -36,6 +37,11 @@
 		4B3B480725E1B4EB00741B6B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B480525E1B4EB00741B6B /* CardView.swift */; };
 		4B3D1B3425FE993300B48135 /* InformationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D1B3325FE993300B48135 /* InformationsView.swift */; };
 		4B3D1B3525FE993300B48135 /* InformationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D1B3325FE993300B48135 /* InformationsView.swift */; };
+		4B4FD2C8260A6039007BF966 /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FD2C7260A6039007BF966 /* TimeTableView.swift */; };
+		4B4FD2CD260A60BB007BF966 /* TimeTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FD2CC260A60BB007BF966 /* TimeTableHandler.swift */; };
+		4B4FD2D2260A6502007BF966 /* TimeTableTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FD2D1260A6502007BF966 /* TimeTableTypes.swift */; };
+		4B4FD2D7260A8E55007BF966 /* WeekDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FD2D6260A8E55007BF966 /* WeekDaysView.swift */; };
+		4B4FD2DC260A8FF0007BF966 /* AddTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FD2DB260A8FF0007BF966 /* AddTimeTableView.swift */; };
 		4B649F2E26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B649F2D26012AAA00CE1F61 /* FinishHomeWorkView.swift */; };
 		4B649F2F26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B649F2D26012AAA00CE1F61 /* FinishHomeWorkView.swift */; };
 		4B649F3826013B7500CE1F61 /* FinishWorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B649F3726013B7500CE1F61 /* FinishWorkDetailView.swift */; };
@@ -90,6 +96,7 @@
 		4B0E522C25FD9546009D63CD /* HomeWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork.xcdatamodel; sourceTree = "<group>"; };
 		4B0E523225FE3E43009D63CD /* SubjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectListView.swift; sourceTree = "<group>"; };
 		4B1BE04B25DDC04A00F26CBA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4B1C37EF260BDAA3005BEC4E /* DayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailView.swift; sourceTree = "<group>"; };
 		4B21AB6A2606C94C00462202 /* AchievementTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementTypes.swift; sourceTree = "<group>"; };
 		4B21AB712606CB6E00462202 /* AchievementsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsListView.swift; sourceTree = "<group>"; };
 		4B21AB792607F04D00462202 /* AchievementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCardView.swift; sourceTree = "<group>"; };
@@ -104,6 +111,11 @@
 		4B3B47F325E1AAB100741B6B /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		4B3B480525E1B4EB00741B6B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4B3D1B3325FE993300B48135 /* InformationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationsView.swift; sourceTree = "<group>"; };
+		4B4FD2C7260A6039007BF966 /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
+		4B4FD2CC260A60BB007BF966 /* TimeTableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableHandler.swift; sourceTree = "<group>"; };
+		4B4FD2D1260A6502007BF966 /* TimeTableTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableTypes.swift; sourceTree = "<group>"; };
+		4B4FD2D6260A8E55007BF966 /* WeekDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDaysView.swift; sourceTree = "<group>"; };
+		4B4FD2DB260A8FF0007BF966 /* AddTimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeTableView.swift; sourceTree = "<group>"; };
 		4B649F2D26012AAA00CE1F61 /* FinishHomeWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishHomeWorkView.swift; sourceTree = "<group>"; };
 		4B649F3726013B7500CE1F61 /* FinishWorkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishWorkDetailView.swift; sourceTree = "<group>"; };
 		4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkPlannerApp.swift; sourceTree = "<group>"; };
@@ -211,6 +223,17 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		4B4FD2C3260A5E84007BF966 /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				4B4FD2C7260A6039007BF966 /* TimeTableView.swift */,
+				4B4FD2D6260A8E55007BF966 /* WeekDaysView.swift */,
+				4B4FD2DB260A8FF0007BF966 /* AddTimeTableView.swift */,
+				4B1C37EF260BDAA3005BEC4E /* DayDetailView.swift */,
+			);
+			path = TimeTable;
+			sourceTree = "<group>";
+		};
 		4B649F3626013B5D00CE1F61 /* Archive */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +262,7 @@
 				4B3B47F325E1AAB100741B6B /* TabItemView.swift */,
 				4BDE378D25AF3EED00158395 /* Handler */,
 				4B3D1B3F25FFABC400B48135 /* SubViews */,
+				4B4FD2C3260A5E84007BF966 /* TimeTable */,
 				4B3D1B4625FFAC2C00B48135 /* HomeWorks */,
 				4B3D1B4725FFAC4C00B48135 /* Settings */,
 				4B6508E625AF31A400FEA20A /* Assets.xcassets */,
@@ -282,6 +306,8 @@
 				4B1BE04B25DDC04A00F26CBA /* Persistence.swift */,
 				4BA39BFB2606C47E00CA41A4 /* AchievementsHandler.swift */,
 				4B21AB6A2606C94C00462202 /* AchievementTypes.swift */,
+				4B4FD2CC260A60BB007BF966 /* TimeTableHandler.swift */,
+				4B4FD2D1260A6502007BF966 /* TimeTableTypes.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -424,14 +450,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B2FFD0425EEF1E20031FFAA /* NotificationHandler.swift in Sources */,
+				4B4FD2CD260A60BB007BF966 /* TimeTableHandler.swift in Sources */,
 				4BCD197925F189FE006A8D3E /* SettingsView.swift in Sources */,
 				4B21AB722606CB6E00462202 /* AchievementsListView.swift in Sources */,
 				4B649F2E26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */,
+				4B4FD2D2260A6502007BF966 /* TimeTableTypes.swift in Sources */,
 				4B649F3826013B7500CE1F61 /* FinishWorkDetailView.swift in Sources */,
 				4B3D1B3425FE993300B48135 /* InformationsView.swift in Sources */,
 				4B0E522D25FD9546009D63CD /* Data.xcdatamodeld in Sources */,
 				4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
+				4B4FD2C8260A6039007BF966 /* TimeTableView.swift in Sources */,
 				4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */,
+				4B4FD2DC260A8FF0007BF966 /* AddTimeTableView.swift in Sources */,
 				4BA39BFC2606C47E00CA41A4 /* AchievementsHandler.swift in Sources */,
 				4B6508F925AF31A400FEA20A /* WorkListView.swift in Sources */,
 				4BFE4AE725AF3797009E0126 /* WorkDetailView.swift in Sources */,
@@ -442,10 +472,12 @@
 				4B3B480625E1B4EB00741B6B /* CardView.swift in Sources */,
 				4B21AB7A2607F04D00462202 /* AchievementCardView.swift in Sources */,
 				4B0E522325FD94F4009D63CD /* AddSubjectView.swift in Sources */,
+				4B1C37F0260BDAA3005BEC4E /* DayDetailView.swift in Sources */,
 				4B21AB6B2606C94C00462202 /* AchievementTypes.swift in Sources */,
 				4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */,
 				4B0E523325FE3E43009D63CD /* SubjectListView.swift in Sources */,
 				4B0A47B325E1D845008B7431 /* LongTextView.swift in Sources */,
+				4B4FD2D7260A8E55007BF966 /* WeekDaysView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

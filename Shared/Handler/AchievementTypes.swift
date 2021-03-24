@@ -11,4 +11,5 @@ enum AchievementsType: String, CaseIterable {
     case homeWorkList = "Hausaufgaben"
     case finishHomeWorks = "Fertige Aufgaben"
     case subjects = "Fächer"
+    case timeTable = "Stunden Plan"
 }

@@ -33,6 +33,13 @@ struct WorkDetailView: View {
                         .foregroundColor(.secondary)
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
+                    
+                    if homework.notify != "" || homework.notify != nil {
+                    Text("Du wirst \(homework.notify!) Minuten vorher benachrichtigt!")
+                        .foregroundColor(.secondary)
+                        .font(.subheadline)
+                        .multilineTextAlignment(.center)
+                    }
                 }
                 
                 VStack {

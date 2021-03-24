@@ -48,6 +48,13 @@ struct AchievementsHandler {
             } else if count == 14 {
                 setAchievement(name: "14 Fächer", level: "Gymniasast", viewContext: viewContext)
             }
+            
+        } else if type == AchievementsType.timeTable {
+            if count == 15 {
+                setAchievement(name: "15 Stunden", level: "Anfänger", viewContext: viewContext)
+            } else if count == 20 {
+                setAchievement(name: "20 Stunden", level: "Streber", viewContext: viewContext)
+            }
         }
         
     }

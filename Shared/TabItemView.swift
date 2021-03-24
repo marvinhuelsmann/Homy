@@ -29,6 +29,12 @@ struct TabItemView: View {
                             Text("Fächer")
                         }
                     
+                    TimeTableView()
+                        .tabItem {
+                            Image(systemName: "tablecells")
+                            Text("Stundenplan")
+                        }
+                    
                     ProfileView()
                         .tabItem {
                             Image(systemName: "person")

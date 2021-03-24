@@ -23,10 +23,16 @@
     <entity name="SubjectsData" representedClassName="SubjectsData" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="TimeTableData" representedClassName="TimeTableData" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="hour" optional="YES" attributeType="String"/>
+        <attribute name="subject" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
+        <element name="AchievementsData" positionX="-45" positionY="54" width="128" height="59"/>
         <element name="FinishWorkData" positionX="-45" positionY="27" width="128" height="119"/>
         <element name="HomeWorkCoreData" positionX="-63" positionY="-18" width="128" height="119"/>
         <element name="SubjectsData" positionX="-36" positionY="45" width="128" height="44"/>
-        <element name="AchievementsData" positionX="-45" positionY="54" width="128" height="59"/>
+        <element name="TimeTableData" positionX="-45" positionY="54" width="128" height="74"/>
     </elements>
 </model>
