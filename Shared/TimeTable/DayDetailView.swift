@@ -14,6 +14,9 @@ struct DayDetailView: View {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \TimeTableData.hour, ascending: false) ])
     private var timeTable: FetchedResults<TimeTableData>
     
+    @FetchRequest(sortDescriptors: [])
+    private var timeTableWish: FetchedResults<TimeTableData>
+    
     /// Editing Mode to delete HomeWorks
     @State private var isEditing: Bool = false
     
@@ -21,7 +24,7 @@ struct DayDetailView: View {
         VStack {
             
             List {
-                ForEach(TimeTableHandler().getSubjectsOnDay(array: timeTable, forDay: date)) { subject in
+                ForEach(TimeTableHandler().getSubjectsOnDay(array: timeTable, forDay: date), id: \.self) { subject in
                     
                     VStack(alignment: .leading) {
                         Text(subject.subject!)
@@ -30,12 +33,14 @@ struct DayDetailView: View {
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
+                    
                 }
-                .onDelete(perform: deleteTimeTableHour(offsets:))
+                .onDelete(perform: deleteTimeTableHour(ar:))
                 
                 VStack {
                     NavigationLink("Neue Stunde hinzufügen", destination: AddTimeTableView(weekDay: date.rawValue))
                 }
+                
             }
             .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive)).animation(Animation.spring())
             .listStyle(PlainListStyle())
@@ -52,7 +57,6 @@ struct DayDetailView: View {
                             }
                         })
                     }.foregroundColor(.red)
-                    
                 }
             })
             
@@ -74,19 +78,19 @@ struct DayDetailView: View {
     
     /// To delete one TimeTable Hour
     /// - Parameter offsets: To get the current TimeTable Hour
-    func deleteTimeTableHour(offsets: IndexSet) {
+    func deleteTimeTableHour(ar offsets: IndexSet) {
         withAnimation {
-            offsets.map {
-                timeTable[$0]
-            }.forEach(viewContext.delete)
-            
-            let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.error)
-            
-            saveContext()
+            for index in offsets {
+                let time = TimeTableHandler().getSubjectsOnDay(array: timeTable, forDay: date)[index]
+                viewContext.delete(time)
+            }
         }
+        
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
+        
+        saveContext()
     }
-    
 }
 
 struct DayDetailView_Previews: PreviewProvider {

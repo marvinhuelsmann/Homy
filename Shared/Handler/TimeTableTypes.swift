@@ -12,7 +12,6 @@ enum TimeTableTypes: String, CaseIterable {
     case thursday = "Donnerstag"
     case friday = "Freitag"
     case weekday = "Wochenende"
-    
 }
 
 struct TimeTableType {

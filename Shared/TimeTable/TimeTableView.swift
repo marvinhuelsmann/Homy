@@ -33,7 +33,7 @@ struct TimeTableView: View {
                         }
                     }
                 } else {
-                    Text("Du musst deinen Stundenplan für morgen ausfüllen!")
+                    Text("Du musst deinen Stundenplan für \(TimeTableHandler().getCurrentWeekDayName(forNextDay: true)) ausfüllen!")
                         .bold()
                 }
             }
