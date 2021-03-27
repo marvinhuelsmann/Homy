@@ -35,7 +35,7 @@ struct WorkDetailView: View {
                         .multilineTextAlignment(.center)
                     
                     if homework.notify != "" || homework.notify != nil {
-                    Text("Du wirst \(homework.notify!) Minuten vorher benachrichtigt!")
+                    Text("Du wirst \(getNotification()) vorher benachrichtigt!")
                         .foregroundColor(.secondary)
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
@@ -132,6 +132,17 @@ struct WorkDetailView: View {
         }
     }
     
+    /// Get the Notification value
+    /// - Returns: value in minutes or in hours
+    func getNotification() -> String {
+        if Int(homework.notify ?? "0") ?? 0 > 60 {
+            let hour: Int = (Int(homework.notify!) ?? 0) / 60
+            return "\(hour == 1 ? "eine" : String(hour)) Stunden"
+        } else {
+            return homework.notify ?? "" + " Minuten"
+        }
+    }
+    
     /// Saves the homework list
     private func saveContext() {
         do {
@@ -202,10 +213,3 @@ struct WorkDetailView: View {
         }
     }
 }
-
-//struct WorkDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        WorkDetailView()
-//            .preferredColorScheme(.light)
-//    }
-//}

@@ -30,7 +30,7 @@ struct TimeTableHandler {
         } else if dayNumberOfWeek() == 5 {
             return forNextDay ? TimeTableTypes.monday.rawValue : TimeTableTypes.friday.rawValue
         } else {
-            return forNextDay ? TimeTableTypes.monday.rawValue : TimeTableTypes.weekday.rawValue
+            return forNextDay ? TimeTableTypes.monday.rawValue : TimeTableTypes.friday.rawValue
         }
     }
     
@@ -51,7 +51,6 @@ struct TimeTableHandler {
     func getSubjectsOnDay(array: FetchedResults<TimeTableData> ,forDay: TimeTableTypes) -> Array<TimeTableData> {
         var subjects =  Array<TimeTableData>()
 
-        
         for result in array {
             if result.date == forDay.rawValue {
                 subjects.append(result)
@@ -68,7 +67,7 @@ struct TimeTableHandler {
         var changeableSubjects: Array<String> = []
         
         for nextDay in nextDaySubjects {
-            if !todaySubjects.contains(nextDay) {
+            if !todaySubjects.contains(nextDay) && !changeableSubjects.contains(nextDay) {
                 changeableSubjects.append(nextDay)
             }
         }
@@ -83,7 +82,7 @@ struct TimeTableHandler {
         var changeableSubjects: Array<String> = []
         
         for today in todaySubjects {
-            if !nextDaySubjects.contains(today) {
+            if !nextDaySubjects.contains(today) && !changeableSubjects.contains(today) {
                 changeableSubjects.append(today)
             }
         }
