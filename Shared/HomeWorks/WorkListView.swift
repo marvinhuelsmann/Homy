@@ -111,7 +111,6 @@ struct WorkListView: View {
     /// Delete all HomeWorks they saved in HomeWorkCoreData
     private func deleteAllHomeWorks() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "HomeWorkCoreData")
-        
         fetchRequest.includesPropertyValues = false
         
         do {

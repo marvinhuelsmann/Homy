@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct DayDetailView: View {
+    /// the timetable type for the detail view
     var date: TimeTableTypes
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \TimeTableData.hour, ascending: false) ])
+    /// get all timetables
     private var timeTable: FetchedResults<TimeTableData>
     
     @FetchRequest(sortDescriptors: [])
+    /// all timetable data
     private var timeTableWish: FetchedResults<TimeTableData>
     
     /// Editing Mode to delete HomeWorks

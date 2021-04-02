@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct WorkDetailView: View {
+    /// the detail homework from the homeworkcoredata
     var homework: HomeWorkCoreData
+    /// the detail finish homework from the finishworkdata
     var finishHomeWork: FinishWorkData  
     
     @FetchRequest(sortDescriptors: [])

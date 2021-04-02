@@ -18,25 +18,30 @@ struct AddHomeWorkView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Environment(\.managedObjectContext) private var viewContext
+    /// current color sheme
     @Environment(\.colorScheme) var colorScheme
     
     @FetchRequest(sortDescriptors: [])
+    /// get all homeworks
     private var homeworks: FetchedResults<HomeWorkCoreData>
     
     @FetchRequest(
         entity: SubjectsData.entity(),
         sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]
+        /// get all subjects
     )private var subjects: FetchedResults<SubjectsData>
     
     private let generator = UISelectionFeedbackGenerator()
     
+    /// the Form inputs
     @State private var name: String = ""
     @State private var timeEnd = Date().addingTimeInterval(1200)
     @State private var subject: String? = ""
     @State private var link: String = ""
     @State private var notify: String = ""
-    
     @State private var notice: String = ""
+    
+    /// if the form is fill in
     @State private var fillInAll: Bool = true
     
     @ObservedObject var notificationManager = NotificationHandler()

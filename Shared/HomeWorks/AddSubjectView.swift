@@ -10,16 +10,21 @@ import SwiftUI
 struct AddSubjectView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Environment(\.managedObjectContext) private var viewContext
+    /// the current color sheme
     @Environment(\.colorScheme) var colorScheme
     
     @FetchRequest(sortDescriptors: [])
+    /// get subjects
     private var subjects: FetchedResults<SubjectsData>
     
+    /// feedback generator
     private let generator = UISelectionFeedbackGenerator()
     
+    /// form inputs
     @State private var name: String = ""
     @State private var fillInAll: Bool = true
     
+    /// notification manager
     @ObservedObject var notificationManager = NotificationHandler()
     
     

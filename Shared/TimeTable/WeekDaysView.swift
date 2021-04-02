@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct WeekDaysView: View {
+    /// alert for the delete button
     @State private var showAlert = false
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     

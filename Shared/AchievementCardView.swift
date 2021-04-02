@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AchievementCardView: View {
+    /// the backgroundcolor of the card
     var color: Color
+    /// the headline name of the card
     var headLine: String
+    /// the bodytext from the card
     var bodyText: String
     
     var body: some View {
@@ -24,7 +27,9 @@ struct AchievementCardView: View {
                     Text(bodyText)
                         .foregroundColor(.white)
                         .font(.body)
+                        .multilineTextAlignment(.center)
                 }
+                .frame(width: 275, height: 100)
                 .padding()
                 .background(color)
                 .cornerRadius(10)

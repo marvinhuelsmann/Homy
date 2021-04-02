@@ -11,6 +11,7 @@ struct TimeTableView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: [])
+    /// get all timetables
     private var timeTable: FetchedResults<TimeTableData>
     
     var body: some View {

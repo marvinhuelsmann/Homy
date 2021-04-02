@@ -14,22 +14,28 @@ struct AddTimeTableView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Environment(\.managedObjectContext) private var viewContext
+    /// current color sheme
     @Environment(\.colorScheme) var colorScheme
     
     @FetchRequest(
         entity: SubjectsData.entity(),
         sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]
+        /// get all subjects
     )private var subjects: FetchedResults<SubjectsData>
     
     @FetchRequest(
         sortDescriptors: []
+        /// get all timetables
     )private var timeTable: FetchedResults<TimeTableData>
     
+    /// feeback generator
     private let generator = UISelectionFeedbackGenerator()
     
+    /// form inpts
     @State private var subject: String? = ""
     @State private var hour: String = ""
     
+    /// if the form is fill in
     @State private var fillInAll: Bool = true
     
     var body: some View {

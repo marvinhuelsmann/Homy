@@ -22,9 +22,13 @@ struct AchievementsListView: View {
                         Text("Bis jetzt hast du noch keine Erfolge sammeln können, nutze weiter die App!")
                     }
                     
+                    
                     ForEach(achievements) { achievement in
-                        AchievementsDetail(achivement: achievement)
-                            .padding()
+                        HStack {
+                            Spacer()
+                            AchievementsDetail(achivement: achievement)
+                            Spacer()
+                        }
                     }
                     
                 }
@@ -50,7 +54,7 @@ struct AchievementsDetail: View {
     var achivement: AchievementsData
     var body: some View {
         
-        AchievementCardView(color: Color.secondary, headLine: achivement.name!, bodyText: achivement.level!)
+        AchievementCardView(color: Color.red, headLine: achivement.name!, bodyText: achivement.level!)
         
     }
 }

@@ -44,7 +44,7 @@ struct AchievementsHandler {
             
         } else if type == AchievementsType.subjects {
             if count == 10 {
-                setAchievement(name: "10 Fächer", level: "Grundschüler", viewContext: viewContext)
+                setAchievement(name: "Du hast 10 Fächer hinzugefügt", level: "Damit bist du ein guter Grundschüler der seine Fächer mit Homy gut sortiert!", viewContext: viewContext)
             } else if count == 14 {
                 setAchievement(name: "14 Fächer", level: "Gymniasast", viewContext: viewContext)
             }
