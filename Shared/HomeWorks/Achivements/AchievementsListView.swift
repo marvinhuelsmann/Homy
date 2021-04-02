@@ -19,13 +19,14 @@ struct AchievementsListView: View {
             VStack {
                 List {
                     if self.achievements.isEmpty {
-                        Text("Bis jetzt hast du noch keine Erfolge sammeln können, nutze die App!")
+                        Text("Bis jetzt hast du noch keine Erfolge sammeln können, nutze weiter die App!")
                     }
                     
                     ForEach(achievements) { achievement in
                         AchievementsDetail(achivement: achievement)
                             .padding()
                     }
+                    
                 }
                 .listStyle(PlainListStyle())
                 .navigationTitle("Erfolge")

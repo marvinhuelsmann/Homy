@@ -300,10 +300,10 @@
 		4BDE378D25AF3EED00158395 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
-				4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */,
-				4B8A6D1725FD84F800079852 /* BioMetricType.swift */,
 				4B0E522B25FD9546009D63CD /* Data.xcdatamodeld */,
 				4B1BE04B25DDC04A00F26CBA /* Persistence.swift */,
+				4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */,
+				4B8A6D1725FD84F800079852 /* BioMetricType.swift */,
 				4BA39BFB2606C47E00CA41A4 /* AchievementsHandler.swift */,
 				4B21AB6A2606C94C00462202 /* AchievementTypes.swift */,
 				4B4FD2CC260A60BB007BF966 /* TimeTableHandler.swift */,

@@ -15,7 +15,6 @@ struct TabItemView: View {
     var body: some View {
         
         VStack {
-            if self.isUnlocked || !SettingsView().requiredPasswordIdOnLogin  {
                 TabView {
                     WorkListView()
                         .tabItem {
@@ -40,20 +39,7 @@ struct TabItemView: View {
                             Image(systemName: "person")
                             Text("Profil")
                         }
-                }
-            } else {
-                VStack {
-                Text("Passwortschutz")
-                    .bold()
-                    .font(.largeTitle)
-                Text("Deine Daten sind mit \(getBiometricTypeName()) geschützt. Um auf die Daten zu greifen zu können musst du dich mit FaceID identifizieren.")
-                    .padding(.trailing)
-                    .padding(.leading)
-                    
-                    Spacer()
-                }
-                .padding(.top, 100)
-            }
+                }.blur(radius: self.isUnlocked || !SettingsView().requiredPasswordIdOnLogin ? 0 : 17)
         }
         .onAppear(perform: authenticate)
         .sheet(isPresented: $showInformationsView, content: {

@@ -38,7 +38,7 @@ struct TimeTableView: View {
                 }
             }
             .toolbar(content: {
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink("Stundenplan", destination: WeekDaysView())
                 }
             })
