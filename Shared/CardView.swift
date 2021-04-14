@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct CardView: View {
+    /// the backgroundcolor of the card
     var color: Color
+    /// the big headline from the card
     var headLine: String
+    /// the bodytext from the card
     var bodyText: String
+    /// the destination from the card
     var desitination: AnyView
     
     var body: some View {

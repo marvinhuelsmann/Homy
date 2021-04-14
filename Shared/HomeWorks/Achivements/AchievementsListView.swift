@@ -54,7 +54,7 @@ struct AchievementsDetail: View {
     var achivement: AchievementsData
     var body: some View {
         
-        AchievementCardView(color: Color.red, headLine: achivement.name!, bodyText: achivement.level!)
+        AchievementCardView(type: achivement.name!, headLine: achivement.name!, bodyText: achivement.level!)
         
     }
 }

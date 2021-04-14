@@ -13,8 +13,9 @@ struct SettingsView: View {
     @AppStorage("secureOnLogin") var requiredPasswordIdOnLogin = false
     @AppStorage("notifications") var allowNotifications = true
     @AppStorage("firstAppOpen") var firstAppOpen = false
-
+    
     var body: some View {
+        
         
         VStack {
             Form {
@@ -26,10 +27,12 @@ struct SettingsView: View {
                 Section(footer: Text("Erhalte Töne wenn du deine Aufgabe den Abgabe Termin erreicht.")) {
                     Toggle("Benachrichtigung", isOn: $allowNotifications)
                 }
-
+                
             }
         }
+        
     }
+    
 }
 
 struct SettingsView_Previews: PreviewProvider {

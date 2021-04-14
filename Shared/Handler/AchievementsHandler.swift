@@ -30,30 +30,29 @@ struct AchievementsHandler {
         
         if type == AchievementsType.homeWorkList {
             if count == 5 {
-                setAchievement(name: "5 Hausaufgaben", level: "Einsteiger", viewContext: viewContext)
+                setAchievement(name: "5 Hausaufgaben", level: "Du hast 5 Aufgaben in Homy eingetragen, Homy wartet auf mehr...", viewContext: viewContext)
             } else if count == 15 {
-                setAchievement(name: "15 Hausaufgaben", level: "Fortschreiter", viewContext: viewContext)
+                setAchievement(name: "15 Hausaufgaben", level: "Du bist dabei viele Hausafgaben zu erstellen, gut!", viewContext: viewContext)
             } else if count == 30 {
-                setAchievement(name: "30 Hausaufgaben", level: "Profi", viewContext: viewContext)
+                setAchievement(name: "35 Hausaufgaben", level: "Du hast 35 Hausaufgaben erstellt damit ist deine Lieblings App Homy", viewContext: viewContext)
             }
             
         } else if type == AchievementsType.finishHomeWorks {
             if count == 7 {
-                setAchievement(name: "7 Hausaufgaben fertig", level: "Einsteiger", viewContext: viewContext)
+                setAchievement(name: "7 Hausaufgaben fertig", level: "Du hast 7 deiner Aufgaben erledigt, weiter so!", viewContext: viewContext)
             }
-            
         } else if type == AchievementsType.subjects {
             if count == 10 {
-                setAchievement(name: "Du hast 10 Fächer hinzugefügt", level: "Damit bist du ein guter Grundschüler der seine Fächer mit Homy gut sortiert!", viewContext: viewContext)
-            } else if count == 14 {
-                setAchievement(name: "14 Fächer", level: "Gymniasast", viewContext: viewContext)
+                setAchievement(name: "10 Fächer hinzugefügt", level: "Damit bist du ein guter Grundschüler der seine Fächer mit Homy gut sortiert!", viewContext: viewContext)
+            } else if count == 22 {
+                setAchievement(name: "22 Fächer", level: "Du hast Homy schon oft für deine Hausaufgaben genutzt", viewContext: viewContext)
             }
             
         } else if type == AchievementsType.timeTable {
             if count == 15 {
-                setAchievement(name: "15 Stunden", level: "Anfänger", viewContext: viewContext)
+                setAchievement(name: "15 Stunden", level: "Du hast 15 Fach Stunden hinzugefügt damit bist du jetzt in der Grundschule.", viewContext: viewContext)
             } else if count == 20 {
-                setAchievement(name: "20 Stunden", level: "Streber", viewContext: viewContext)
+                setAchievement(name: "20 Stunden", level: "Mit 20 Fach Stunden bist du ein Schüler der ganz schön viel zu tuhen hat.", viewContext: viewContext)
             }
         }
         

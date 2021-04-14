@@ -9,7 +9,9 @@ import SwiftUI
 import LocalAuthentication
 
 struct TabItemView: View {
+    /// if the app is unlocked
     @State private var isUnlocked = false
+    /// if the informations view from the app will be showed
     @State private var showInformationsView = !SettingsView().firstAppOpen
     
     var body: some View {

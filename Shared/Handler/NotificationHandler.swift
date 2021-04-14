@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class NotificationHandler: ObservableObject {
-    
+    /// current notification
     var notifications = [Notification]()
     
     init() {

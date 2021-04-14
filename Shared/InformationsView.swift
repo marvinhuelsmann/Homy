@@ -116,7 +116,7 @@ extension Color {
 struct InformationContainerView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            InformationDetailView(title: "Aufgaben", subTitle: "Mit Homy ist deine Aufgaben Verwaltung und deine Erinnerungen kinderleicht zu bedienen.", imageName: "list.bullet.rectangle")
+            InformationDetailView(title: "Aufgaben", subTitle: "Mit Homy ist deine Aufgaben Verwaltung kinderleicht zu bedienen. Außerdem kannst du Aufgaben Erinnerungen setzen.", imageName: "list.bullet.rectangle")
             
             InformationDetailView(title: "Benachrichtigungen", subTitle: "Wenn du willst erinnert dich Homy dann vorher wenn du deine Aufgaben abgeben musst.", imageName: "bell")
             
