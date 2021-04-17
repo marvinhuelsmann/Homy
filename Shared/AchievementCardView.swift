@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AchievementCardView: View {
-    /// the backgroundcolor of the card
+    /// the name from the AchievementTypes
     var type: String
     /// the headline name of the card
     var headLine: String
@@ -31,7 +31,7 @@ struct AchievementCardView: View {
                 }
                 .frame(width: 275, height: 100)
                 .padding()
-                .background(Color(getColorOfAchievementType(type: type)))
+                .background(getColorOfAchievementType(type: type))
                 .cornerRadius(10)
                 .shadow(radius: 5)
         

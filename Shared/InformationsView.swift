@@ -31,6 +31,11 @@ struct InformationsView: View {
                 }
                 .padding(.horizontal)
                 
+                Text("Füge zuerst deine aktuellen Fächer hinzu um deinen Stundenplan und um Hausaufgaben hinzufügen zu können.")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+                
             }
             .padding(.top, 100)
            

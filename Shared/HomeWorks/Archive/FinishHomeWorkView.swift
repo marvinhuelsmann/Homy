@@ -21,8 +21,6 @@ struct FinishHomeWorkView: View {
     @State private var isEditing: Bool = false
     @State private var showAlert = false
     
-    private var pushValue: Int = 0
-    
     var body: some View {
         VStack {
             VStack {
@@ -33,7 +31,7 @@ struct FinishHomeWorkView: View {
                     
                     ForEach(homeworks) { homework in
                         
-                        if homework.timeEnd! < Date() && pushValue == 0 || homework.isFinish {
+                        if homework.timeEnd! < Date() || homework.isFinish {
                             FinishHomeWorkDetail(homework: homework)
                         }
                     }
@@ -88,10 +86,6 @@ struct FinishHomeWorkView: View {
             
             Spacer()
         }
-    }
-    
-    private func updatePushValue() {
-        pushValue + 1
     }
     
     /// Delete all HomeWorks they saved in HomeWorkCoreData

@@ -3,6 +3,7 @@
     <entity name="AchievementsData" representedClassName="AchievementsData" syncable="YES" codeGenerationType="class">
         <attribute name="level" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
     <entity name="FinishWorkData" representedClassName="FinishWorkData" syncable="YES" codeGenerationType="class">
         <attribute name="isFinish" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -29,7 +30,7 @@
         <attribute name="subject" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="AchievementsData" positionX="-45" positionY="54" width="128" height="59"/>
+        <element name="AchievementsData" positionX="-45" positionY="54" width="128" height="74"/>
         <element name="FinishWorkData" positionX="-45" positionY="27" width="128" height="119"/>
         <element name="HomeWorkCoreData" positionX="-63" positionY="-18" width="128" height="119"/>
         <element name="SubjectsData" positionX="-36" positionY="45" width="128" height="44"/>

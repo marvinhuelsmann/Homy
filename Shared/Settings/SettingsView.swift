@@ -13,6 +13,8 @@ struct SettingsView: View {
     @AppStorage("secureOnLogin") var requiredPasswordIdOnLogin = false
     @AppStorage("notifications") var allowNotifications = true
     @AppStorage("firstAppOpen") var firstAppOpen = false
+    @AppStorage("onlineWork") var onlineWork = true
+    @AppStorage("noticeWork") var noticeWork = true
     
     var body: some View {
         
@@ -24,8 +26,17 @@ struct SettingsView: View {
                     Toggle(getBiometricTypeName(), isOn: $requiredPasswordIdOnLogin)
                 }
                 
-                Section(footer: Text("Erhalte Töne wenn du deine Aufgabe den Abgabe Termin erreicht.")) {
+                Section(header: Text("Aufgaben"), footer: Text("Erhalte Töne wenn du deine Aufgabe den Abgabe Termin erreicht.")) {
                     Toggle("Benachrichtigung", isOn: $allowNotifications)
+                }
+                
+                Section(footer: Text("Wenn diese Option aktiviert ist, musst du ein Schulwebsite Link in deinen Aufgaben hinterlegen.")) {
+                    Toggle("Online Aufgaben", isOn: $onlineWork)
+                }
+                
+                
+                Section(footer: Text("Wenn diese Option aktiviert ist, musst du eine Notiz in deinen Aufgaben hinterlegen.")) {
+                    Toggle("Aufgaben Notizen", isOn: $noticeWork)
                 }
                 
             }

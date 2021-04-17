@@ -57,7 +57,7 @@ struct TabItemView: View {
             let context = LAContext()
             var error: NSError?
             
-            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) || context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
                 let reason = "Um deine gespeicherten Hausaufgaben anzeigen zu lassen."
                 
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in

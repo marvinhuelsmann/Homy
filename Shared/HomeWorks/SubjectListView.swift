@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 import CoreData
 
 struct SubjectListView: View {
@@ -70,7 +69,7 @@ struct SubjectListView: View {
                 .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text("Bist du sicher?"),
-                        message: Text("Du löscht alle deine gespeicherten Hausaufgaben. Du kannst diesen Schritt nicht mehr rückgänging machen!"),
+                        message: Text("Du löscht alle deine gespeicherten Fächer. Du kannst diesen Schritt nicht mehr rückgänging machen!"),
                         primaryButton: .default(
                             Text("Abbrechen")
                         ),
@@ -84,20 +83,15 @@ struct SubjectListView: View {
             .navigationTitle("Fächer")
             .onAppear {
                 self.isAddButtonClicking = false
-                
             }
             
-            
             Spacer()
-            
-            
         }
     }
     
     /// Delete all HomeWorks they saved in HomeWorkCoreData
     private func deleteAllSubjects() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SubjectsData")
-        
         fetchRequest.includesPropertyValues = false
         
         do {

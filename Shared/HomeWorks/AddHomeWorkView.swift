@@ -47,83 +47,87 @@ struct AddHomeWorkView: View {
     @ObservedObject var notificationManager = NotificationHandler()
     
     var body: some View {
-    
-            Form {
-                Section(header: Text("Aufgabe*")) {
-                    TextField("Arbeitsblatt 4", text: $name)
+        
+        Form {
+            Section(header: Text("Aufgabe*")) {
+                TextField("Arbeitsblatt 4", text: $name)
+                
+                Picker(selection: $subject, label: Text("Fach")) {
                     
-                    Picker(selection: $subject, label: Text("Fach")) {
-
-                        ForEach(subjects) { subjectObject in
-                            Text(subjectObject.name ?? "")
-                                .tag(subjectObject.name as String?)
-                        }
+                    ForEach(subjects) { subjectObject in
+                        Text(subjectObject.name ?? "")
+                            .tag(subjectObject.name as String?)
                     }
                 }
-                
+            }
+            
+            if SettingsView().onlineWork {
                 Section(header: Text("Link"), footer: Text("Der Abgabe Link zu deiner Aufgabe der zu einer Internet Seite weiterleitet.")) {
                     TextField("Schulwebsite Link", text: $link)
                 }
-                
+            }
+            
+            if SettingsView().noticeWork {
                 Section(header: Text("Notiz"), footer: Text("Aufgaben Beschreibungen oder allgemeine Notizen über deine Hausaufgabe.")) {
                     TextEditor(text: $notice)
                 }
-                
-                Section(header: Text("Zeit*"), footer: Text("Der endgültige Abgabe Punkt deiner Hausaufgabe.")) {
-                    DatePicker("Bis wann?", selection: $timeEnd)
-                }
-                
-                
-                if SettingsView().allowNotifications {
-                    Section(header: Text("Benachrichigung*"), footer: Text("Wie viele Minuten vorher du eine Benachrichtigung erhalten willst.")) {
-                        TextField("5", text: $notify)
-                            .keyboardType(.numberPad)
-                            .onReceive(Just(notify)) { newValue in
-                                let filtered = newValue.filter { "0123456789".contains($0) }
-                                if filtered != newValue {
-                                    self.notify = filtered
-                                }
+            }
+            
+            Section(header: Text("Zeit*"), footer: Text("Der endgültige Abgabe Punkt deiner Hausaufgabe.")) {
+                DatePicker("Bis wann?", selection: $timeEnd)
+            }
+            
+            
+            if SettingsView().allowNotifications {
+                Section(header: Text("Benachrichigung*"), footer: Text("Wie viele Minuten vorher du eine Benachrichtigung erhalten willst.")) {
+                    TextField("5", text: $notify)
+                        .keyboardType(.numberPad)
+                        .onReceive(Just(notify)) { newValue in
+                            let filtered = newValue.filter { "0123456789".contains($0) }
+                            if filtered != newValue {
+                                self.notify = filtered
                             }
-                    }
-                }
-                
-                Section {
-                    HStack(alignment: .center) {
-                        Spacer()
-                        Button("Hausaufgabe hinzufügen") {
-                            if name != "" && subject != "" && notify != "" {
-                                makeHomeWork()
-                            } else {
-                                fillInAll = false
-                            }
-                            generator.selectionChanged()
                         }
-                        .foregroundColor(.black)
+                }
+            }
+            
+            Section {
+                HStack(alignment: .center) {
+                    Spacer()
+                    Button("Hausaufgabe hinzufügen") {
+                        if name != "" && subject != "" && notify != "" {
+                            makeHomeWork()
+                        } else {
+                            fillInAll = false
+                        }
+                        generator.selectionChanged()
+                    }
+                    .foregroundColor(.black)
+                    Spacer()
+                }
+                .listRowInsets(EdgeInsets())
+                .padding()
+                .background(Color.white)
+                .cornerRadius(5)
+                .shadow(radius: 4)
+                .padding()
+                
+                if !fillInAll {
+                    HStack {
+                        Spacer()
+                        Text("Es wurden nicht alle relevanten benötigten Felder ausgefüllt!")
+                            .bold()
+                            .multilineTextAlignment(.center)
                         Spacer()
                     }
                     .listRowInsets(EdgeInsets())
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(5)
-                    .shadow(radius: 4)
-                    .padding()
-
-                    if !fillInAll {
-                        HStack {
-                            Spacer()
-                            Text("Es wurden nicht alle relevanten benötigten Felder ausgefüllt!")
-                                .bold()
-                                .multilineTextAlignment(.center)
-                            Spacer()
-                        }
-                        .listRowInsets(EdgeInsets())
-                    }
                 }
-                .background(colorScheme == .light ? Color(UIColor.secondarySystemBackground) : Color.black)
+            }
+            .background(colorScheme == .light ? Color(UIColor.secondarySystemBackground) : Color.black)
             
-                
+            
         }
-            .navigationTitle("Neue Aufgabe")
+        .navigationTitle("Neue Aufgabe")
     }
     
     /// Save the Context from the 
@@ -167,7 +171,7 @@ struct AddHomeWorkView: View {
         finishHomeWork.timeEnd = self.timeEnd
         finishHomeWork.link  = self.link
         finishHomeWork.isFinish = false
-
+        
         saveContext()
         
         AchievementsHandler().setAchievements(type: AchievementsType.homeWorkList, count: homeworks.count, viewContext: viewContext)
