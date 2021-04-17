@@ -14,10 +14,18 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>WorkWidgetExtension.xcscheme_^#shared#^_</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4B3B1CA425CF5C2000E01BFE</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4B6508EA25AF31A400FEA20A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

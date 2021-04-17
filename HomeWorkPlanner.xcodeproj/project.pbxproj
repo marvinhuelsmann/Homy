@@ -24,13 +24,6 @@
 		4B21AB7A2607F04D00462202 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB792607F04D00462202 /* AchievementCardView.swift */; };
 		4B21AB7B2607F04D00462202 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21AB792607F04D00462202 /* AchievementCardView.swift */; };
 		4B2FFD0425EEF1E20031FFAA /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */; };
-		4B3B1CA825CF5C2000E01BFE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */; };
-		4B3B1CAA25CF5C2000E01BFE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA925CF5C2000E01BFE /* SwiftUI.framework */; };
-		4B3B1CAD25CF5C2000E01BFE /* WorkWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAC25CF5C2000E01BFE /* WorkWidget.swift */; };
-		4B3B1CB025CF5C2100E01BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAF25CF5C2100E01BFE /* Assets.xcassets */; };
-		4B3B1CB225CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */; };
-		4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */; };
-		4B3B1CB625CF5C2100E01BFE /* WorkWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4B3B47F425E1AAB100741B6B /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47F325E1AAB100741B6B /* TabItemView.swift */; };
 		4B3B47F525E1AAB100741B6B /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B47F325E1AAB100741B6B /* TabItemView.swift */; };
 		4B3B480625E1B4EB00741B6B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B480525E1B4EB00741B6B /* CardView.swift */; };
@@ -66,16 +59,6 @@
 		4BFE4AE825AF3797009E0126 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4B3B1CB425CF5C2100E01BFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B6508DF25AF31A200FEA20A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4B3B1CA425CF5C2000E01BFE;
-			remoteInfo = WorkWidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		4B3B1CBA25CF5C2100E01BFE /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -83,7 +66,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				4B3B1CB625CF5C2100E01BFE /* WorkWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,13 +83,8 @@
 		4B21AB712606CB6E00462202 /* AchievementsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsListView.swift; sourceTree = "<group>"; };
 		4B21AB792607F04D00462202 /* AchievementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCardView.swift; sourceTree = "<group>"; };
 		4B2FFD0325EEF1E20031FFAA /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
-		4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorkWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4B3B1CA925CF5C2000E01BFE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		4B3B1CAC25CF5C2000E01BFE /* WorkWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWidget.swift; sourceTree = "<group>"; };
-		4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WorkWidget.intentdefinition; sourceTree = "<group>"; };
-		4B3B1CAF25CF5C2100E01BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4B3B1CB125CF5C2100E01BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3B47F325E1AAB100741B6B /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		4B3B480525E1B4EB00741B6B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4B3D1B3325FE993300B48135 /* InformationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationsView.swift; sourceTree = "<group>"; };
@@ -135,15 +112,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4B3B1CA225CF5C2000E01BFE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4B3B1CAA25CF5C2000E01BFE /* SwiftUI.framework in Frameworks */,
-				4B3B1CA825CF5C2000E01BFE /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4B6508E825AF31A400FEA20A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,17 +144,6 @@
 				4B3B1CA925CF5C2000E01BFE /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4B3B1CAB25CF5C2000E01BFE /* WorkWidget */ = {
-			isa = PBXGroup;
-			children = (
-				4B3B1CAC25CF5C2000E01BFE /* WorkWidget.swift */,
-				4B3B1CAE25CF5C2000E01BFE /* WorkWidget.intentdefinition */,
-				4B3B1CAF25CF5C2100E01BFE /* Assets.xcassets */,
-				4B3B1CB125CF5C2100E01BFE /* Info.plist */,
-			);
-			path = WorkWidget;
 			sourceTree = "<group>";
 		};
 		4B3D1B3F25FFABC400B48135 /* SubViews */ = {
@@ -249,7 +206,6 @@
 				4B6508E325AF31A300FEA20A /* Shared */,
 				4B6508ED25AF31A400FEA20A /* iOS */,
 				4B6508F425AF31A400FEA20A /* macOS */,
-				4B3B1CAB25CF5C2000E01BFE /* WorkWidget */,
 				4B3B1CA625CF5C2000E01BFE /* Frameworks */,
 				4B6508EC25AF31A400FEA20A /* Products */,
 			);
@@ -275,7 +231,6 @@
 			children = (
 				4B6508EB25AF31A400FEA20A /* HomeWorkPlanner.app */,
 				4B6508F325AF31A400FEA20A /* HomeWorkPlanner.app */,
-				4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -315,23 +270,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B3B1CA425CF5C2000E01BFE /* WorkWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4B3B1CB725CF5C2100E01BFE /* Build configuration list for PBXNativeTarget "WorkWidgetExtension" */;
-			buildPhases = (
-				4B3B1CA125CF5C2000E01BFE /* Sources */,
-				4B3B1CA225CF5C2000E01BFE /* Frameworks */,
-				4B3B1CA325CF5C2000E01BFE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WorkWidgetExtension;
-			productName = WorkWidgetExtension;
-			productReference = 4B3B1CA525CF5C2000E01BFE /* WorkWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		4B6508EA25AF31A400FEA20A /* HomeWorkPlanner (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B6508FF25AF31A400FEA20A /* Build configuration list for PBXNativeTarget "HomeWorkPlanner (iOS)" */;
@@ -344,7 +282,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4B3B1CB525CF5C2100E01BFE /* PBXTargetDependency */,
 			);
 			name = "HomeWorkPlanner (iOS)";
 			productName = "HomeWorkPlanner (iOS)";
@@ -377,9 +314,6 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					4B3B1CA425CF5C2000E01BFE = {
-						CreatedOnToolsVersion = 12.4;
-					};
 					4B6508EA25AF31A400FEA20A = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -403,20 +337,11 @@
 			targets = (
 				4B6508EA25AF31A400FEA20A /* HomeWorkPlanner (iOS) */,
 				4B6508F225AF31A400FEA20A /* HomeWorkPlanner (macOS) */,
-				4B3B1CA425CF5C2000E01BFE /* WorkWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4B3B1CA325CF5C2000E01BFE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4B3B1CB025CF5C2100E01BFE /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4B6508E925AF31A400FEA20A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,15 +361,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4B3B1CA125CF5C2000E01BFE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4B3B1CAD25CF5C2000E01BFE /* WorkWidget.swift in Sources */,
-				4B3B1CB225CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4B6508E725AF31A400FEA20A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,7 +376,6 @@
 				4B0E522D25FD9546009D63CD /* Data.xcdatamodeld in Sources */,
 				4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
 				4B4FD2C8260A6039007BF966 /* TimeTableView.swift in Sources */,
-				4B3B1CB325CF5C2100E01BFE /* WorkWidget.intentdefinition in Sources */,
 				4B4FD2DC260A8FF0007BF966 /* AddTimeTableView.swift in Sources */,
 				4BA39BFC2606C47E00CA41A4 /* AchievementsHandler.swift in Sources */,
 				4B6508F925AF31A400FEA20A /* WorkListView.swift in Sources */,
@@ -510,62 +425,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4B3B1CB525CF5C2100E01BFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4B3B1CA425CF5C2000E01BFE /* WorkWidgetExtension */;
-			targetProxy = 4B3B1CB425CF5C2100E01BFE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		4B3B1CB825CF5C2100E01BFE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TQA322H87A;
-				INFOPLIST_FILE = WorkWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner.WorkWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4B3B1CB925CF5C2100E01BFE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TQA322H87A;
-				INFOPLIST_FILE = WorkWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner.WorkWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		4B6508FD25AF31A400FEA20A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -680,7 +540,6 @@
 		4B65090025AF31A400FEA20A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -703,7 +562,6 @@
 		4B65090125AF31A400FEA20A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -777,15 +635,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B3B1CB725CF5C2100E01BFE /* Build configuration list for PBXNativeTarget "WorkWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4B3B1CB825CF5C2100E01BFE /* Debug */,
-				4B3B1CB925CF5C2100E01BFE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4B6508E225AF31A200FEA20A /* Build configuration list for PBXProject "HomeWorkPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
