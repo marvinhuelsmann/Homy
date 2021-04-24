@@ -52,6 +52,7 @@ struct TabItemView: View {
         
     }
     
+    /// To authenticate the user with the app
     func authenticate() {
         if SettingsView().requiredPasswordIdOnLogin {
             let context = LAContext()

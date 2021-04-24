@@ -22,7 +22,6 @@ struct AchievementsListView: View {
                         Text("Bis jetzt hast du noch keine Erfolge sammeln können, nutze weiter die App!")
                     }
                     
-                    
                     ForEach(achievements) { achievement in
                         HStack {
                             Spacer()
@@ -54,7 +53,7 @@ struct AchievementsDetail: View {
     var achivement: AchievementsData
     var body: some View {
         
-            AchievementCardView(type: achivement.type!, headLine: achivement.name!, bodyText: achivement.level!)
+        AchievementCardView(type: achivement.type!, headLine: achivement.name!, bodyText: achivement.level!)
         
     }
 }
