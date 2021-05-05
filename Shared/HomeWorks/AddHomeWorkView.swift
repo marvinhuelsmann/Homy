@@ -128,6 +128,7 @@ struct AddHomeWorkView: View {
             
         }
         .navigationTitle("Neue Aufgabe")
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     /// Save the Context from the 

@@ -15,7 +15,6 @@ struct TabItemView: View {
     @State private var showInformationsView = !SettingsView().firstAppOpen
     
     var body: some View {
-        
         VStack {
                 TabView {
                     WorkListView()

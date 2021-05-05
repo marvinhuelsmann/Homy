@@ -25,7 +25,6 @@ struct DayDetailView: View {
     
     var body: some View {
         VStack {
-            
             List {
                 ForEach(TimeTableHandler().getSubjectsOnDay(array: timeTable, forDay: date), id: \.self) { subject in
                     
@@ -62,8 +61,6 @@ struct DayDetailView: View {
                     }.foregroundColor(.red)
                 }
             })
-            
-            
         }
         .navigationTitle(date.rawValue)
     }

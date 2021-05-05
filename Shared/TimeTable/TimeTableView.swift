@@ -46,6 +46,7 @@ struct TimeTableView: View {
             .listStyle(PlainListStyle())
             .navigationTitle("Für \(TimeTableHandler().getCurrentWeekDayName(forNextDay: true))")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -75,6 +75,7 @@ struct AddSubjectView: View {
             }
         }
         .navigationTitle("Neues Fach")
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     /// Save the Context from the
