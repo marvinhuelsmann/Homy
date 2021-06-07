@@ -15,11 +15,11 @@ struct CardView: View {
     /// the bodytext from the card
     var bodyText: String
     /// the destination from the card
-    var desitination: AnyView
+    var destination: AnyView
     
     var body: some View {
         NavigationLink(
-            destination: desitination,
+            destination: destination,
             label: {
                 VStack {
                     Text(headLine)
@@ -43,6 +43,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(color: Color.white, headLine: "HeadLine", bodyText: "This is an body text", desitination: AnyView(AddHomeWorkView()))
+        CardView(color: Color.white, headLine: "HeadLine", bodyText: "This is an body text", destination: AnyView(AddHomeWorkView()))
     }
 }

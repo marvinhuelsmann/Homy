@@ -15,6 +15,8 @@
 		4B0E522E25FD9546009D63CD /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E522B25FD9546009D63CD /* Data.xcdatamodeld */; };
 		4B0E523325FE3E43009D63CD /* SubjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E523225FE3E43009D63CD /* SubjectListView.swift */; };
 		4B0E523425FE3E43009D63CD /* SubjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E523225FE3E43009D63CD /* SubjectListView.swift */; };
+		4B1AC3AA266EBF7700E15432 /* ShadowCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AC3A9266EBF7700E15432 /* ShadowCardView.swift */; };
+		4B1AC3AB266EBF7700E15432 /* ShadowCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AC3A9266EBF7700E15432 /* ShadowCardView.swift */; };
 		4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B1C37F0260BDAA3005BEC4E /* DayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C37EF260BDAA3005BEC4E /* DayDetailView.swift */; };
@@ -77,6 +79,7 @@
 		4B0E522225FD94F4009D63CD /* AddSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectView.swift; sourceTree = "<group>"; };
 		4B0E522C25FD9546009D63CD /* HomeWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork.xcdatamodel; sourceTree = "<group>"; };
 		4B0E523225FE3E43009D63CD /* SubjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectListView.swift; sourceTree = "<group>"; };
+		4B1AC3A9266EBF7700E15432 /* ShadowCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCardView.swift; sourceTree = "<group>"; };
 		4B1BE04B25DDC04A00F26CBA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4B1C37EF260BDAA3005BEC4E /* DayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailView.swift; sourceTree = "<group>"; };
 		4B21AB6A2606C94C00462202 /* AchievementTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementTypes.swift; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 				4B0A47B225E1D845008B7431 /* LongTextView.swift */,
 				4B3D1B3325FE993300B48135 /* InformationsView.swift */,
 				4B21AB792607F04D00462202 /* AchievementCardView.swift */,
+				4B1AC3A9266EBF7700E15432 /* ShadowCardView.swift */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -368,6 +372,7 @@
 				4B2FFD0425EEF1E20031FFAA /* NotificationHandler.swift in Sources */,
 				4B4FD2CD260A60BB007BF966 /* TimeTableHandler.swift in Sources */,
 				4BCD197925F189FE006A8D3E /* SettingsView.swift in Sources */,
+				4B1AC3AA266EBF7700E15432 /* ShadowCardView.swift in Sources */,
 				4B21AB722606CB6E00462202 /* AchievementsListView.swift in Sources */,
 				4B649F2E26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */,
 				4B4FD2D2260A6502007BF966 /* TimeTableTypes.swift in Sources */,
@@ -418,6 +423,7 @@
 				4B8A6D1925FD84F900079852 /* BioMetricType.swift in Sources */,
 				4BCD197A25F189FE006A8D3E /* SettingsView.swift in Sources */,
 				4B649F2F26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */,
+				4B1AC3AB266EBF7700E15432 /* ShadowCardView.swift in Sources */,
 				4B8CFDD825F17C9700F615E1 /* ProfileView.swift in Sources */,
 				4B0E523425FE3E43009D63CD /* SubjectListView.swift in Sources */,
 			);

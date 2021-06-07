@@ -18,7 +18,6 @@ struct SettingsView: View {
     
     var body: some View {
         
-        
         VStack {
             Form {
                 
@@ -38,12 +37,9 @@ struct SettingsView: View {
                 Section(footer: Text("Wenn diese Option aktiviert ist, musst du eine Notiz in deinen Aufgaben hinterlegen.")) {
                     Toggle("Aufgaben Notizen", isOn: $noticeWork)
                 }
-                
             }
         }
-        
     }
-    
 }
 
 struct SettingsView_Previews: PreviewProvider {
