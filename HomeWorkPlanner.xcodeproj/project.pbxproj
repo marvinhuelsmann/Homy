@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0243F0267A46B500DD1FF3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA725CF5C2000E01BFE /* WidgetKit.framework */; };
+		4B0243F1267A46B500DD1FF3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3B1CA925CF5C2000E01BFE /* SwiftUI.framework */; };
+		4B0243F4267A46B500DD1FF3 /* HomyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0243F3267A46B500DD1FF3 /* HomyWidget.swift */; };
+		4B0243F7267A46B700DD1FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0243F6267A46B700DD1FF3 /* Assets.xcassets */; };
+		4B0243F9267A46B700DD1FF3 /* HomyWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4B0243F5267A46B500DD1FF3 /* HomyWidget.intentdefinition */; };
+		4B0243FA267A46B700DD1FF3 /* HomyWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4B0243F5267A46B500DD1FF3 /* HomyWidget.intentdefinition */; };
+		4B0243FD267A46B700DD1FF3 /* HomyWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B0243EF267A46B500DD1FF3 /* HomyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4B0A47B325E1D845008B7431 /* LongTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A47B225E1D845008B7431 /* LongTextView.swift */; };
 		4B0A47B425E1D845008B7431 /* LongTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A47B225E1D845008B7431 /* LongTextView.swift */; };
 		4B0E522325FD94F4009D63CD /* AddSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E522225FD94F4009D63CD /* AddSubjectView.swift */; };
@@ -17,6 +24,8 @@
 		4B0E523425FE3E43009D63CD /* SubjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E523225FE3E43009D63CD /* SubjectListView.swift */; };
 		4B1AC3AA266EBF7700E15432 /* ShadowCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AC3A9266EBF7700E15432 /* ShadowCardView.swift */; };
 		4B1AC3AB266EBF7700E15432 /* ShadowCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AC3A9266EBF7700E15432 /* ShadowCardView.swift */; };
+		4B1AC3AD266FD3CB00E15432 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AC3AC266FD3CB00E15432 /* Sizes.swift */; };
+		4B1AC3AE266FD3CB00E15432 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AC3AC266FD3CB00E15432 /* Sizes.swift */; };
 		4B1BE04C25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B1BE04D25DDC04A00F26CBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BE04B25DDC04A00F26CBA /* Persistence.swift */; };
 		4B1C37F0260BDAA3005BEC4E /* DayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C37EF260BDAA3005BEC4E /* DayDetailView.swift */; };
@@ -37,6 +46,7 @@
 		4B4FD2D2260A6502007BF966 /* TimeTableTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FD2D1260A6502007BF966 /* TimeTableTypes.swift */; };
 		4B4FD2D7260A8E55007BF966 /* WeekDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FD2D6260A8E55007BF966 /* WeekDaysView.swift */; };
 		4B4FD2DC260A8FF0007BF966 /* AddTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FD2DB260A8FF0007BF966 /* AddTimeTableView.swift */; };
+		4B56A0D12728A7AF00B9CADB /* PreInstallSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B56A0D02728A7AF00B9CADB /* PreInstallSubjects.swift */; };
 		4B649F2E26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B649F2D26012AAA00CE1F61 /* FinishHomeWorkView.swift */; };
 		4B649F2F26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B649F2D26012AAA00CE1F61 /* FinishHomeWorkView.swift */; };
 		4B649F3826013B7500CE1F61 /* FinishWorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B649F3726013B7500CE1F61 /* FinishWorkDetailView.swift */; };
@@ -61,6 +71,16 @@
 		4BFE4AE825AF3797009E0126 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE4AE625AF3797009E0126 /* WorkDetailView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4B0243FB267A46B700DD1FF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B6508DF25AF31A200FEA20A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B0243EE267A46B500DD1FF3;
+			remoteInfo = HomyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		4B3B1CBA25CF5C2100E01BFE /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -68,6 +88,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				4B0243FD267A46B700DD1FF3 /* HomyWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,11 +96,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B0243EF267A46B500DD1FF3 /* HomyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HomyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0243F3267A46B500DD1FF3 /* HomyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomyWidget.swift; sourceTree = "<group>"; };
+		4B0243F5267A46B500DD1FF3 /* HomyWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = HomyWidget.intentdefinition; sourceTree = "<group>"; };
+		4B0243F6267A46B700DD1FF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B0243F8267A46B700DD1FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B0A47B225E1D845008B7431 /* LongTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextView.swift; sourceTree = "<group>"; };
 		4B0E522225FD94F4009D63CD /* AddSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectView.swift; sourceTree = "<group>"; };
 		4B0E522C25FD9546009D63CD /* HomeWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork.xcdatamodel; sourceTree = "<group>"; };
 		4B0E523225FE3E43009D63CD /* SubjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectListView.swift; sourceTree = "<group>"; };
 		4B1AC3A9266EBF7700E15432 /* ShadowCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCardView.swift; sourceTree = "<group>"; };
+		4B1AC3AC266FD3CB00E15432 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		4B1BE04B25DDC04A00F26CBA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4B1C37EF260BDAA3005BEC4E /* DayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailView.swift; sourceTree = "<group>"; };
 		4B21AB6A2606C94C00462202 /* AchievementTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementTypes.swift; sourceTree = "<group>"; };
@@ -96,6 +123,7 @@
 		4B4FD2D1260A6502007BF966 /* TimeTableTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableTypes.swift; sourceTree = "<group>"; };
 		4B4FD2D6260A8E55007BF966 /* WeekDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDaysView.swift; sourceTree = "<group>"; };
 		4B4FD2DB260A8FF0007BF966 /* AddTimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeTableView.swift; sourceTree = "<group>"; };
+		4B56A0D02728A7AF00B9CADB /* PreInstallSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreInstallSubjects.swift; sourceTree = "<group>"; };
 		4B649F2D26012AAA00CE1F61 /* FinishHomeWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishHomeWorkView.swift; sourceTree = "<group>"; };
 		4B649F3726013B7500CE1F61 /* FinishWorkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishWorkDetailView.swift; sourceTree = "<group>"; };
 		4B6508E425AF31A300FEA20A /* HomeWorkPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkPlannerApp.swift; sourceTree = "<group>"; };
@@ -115,6 +143,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4B0243EC267A46B500DD1FF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0243F1267A46B500DD1FF3 /* SwiftUI.framework in Frameworks */,
+				4B0243F0267A46B500DD1FF3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4B6508E825AF31A400FEA20A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +169,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B0243F2267A46B500DD1FF3 /* HomyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4B0243F3267A46B500DD1FF3 /* HomyWidget.swift */,
+				4B0243F5267A46B500DD1FF3 /* HomyWidget.intentdefinition */,
+				4B0243F6267A46B700DD1FF3 /* Assets.xcassets */,
+				4B0243F8267A46B700DD1FF3 /* Info.plist */,
+			);
+			path = HomyWidget;
+			sourceTree = "<group>";
+		};
 		4B21AB702606CB5500462202 /* Achivements */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +205,7 @@
 				4B3D1B3325FE993300B48135 /* InformationsView.swift */,
 				4B21AB792607F04D00462202 /* AchievementCardView.swift */,
 				4B1AC3A9266EBF7700E15432 /* ShadowCardView.swift */,
+				4B1AC3AC266FD3CB00E15432 /* Sizes.swift */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -210,6 +259,7 @@
 				4B6508E325AF31A300FEA20A /* Shared */,
 				4B6508ED25AF31A400FEA20A /* iOS */,
 				4B6508F425AF31A400FEA20A /* macOS */,
+				4B0243F2267A46B500DD1FF3 /* HomyWidget */,
 				4B3B1CA625CF5C2000E01BFE /* Frameworks */,
 				4B6508EC25AF31A400FEA20A /* Products */,
 			);
@@ -235,6 +285,7 @@
 			children = (
 				4B6508EB25AF31A400FEA20A /* HomeWorkPlanner.app */,
 				4B6508F325AF31A400FEA20A /* HomeWorkPlanner.app */,
+				4B0243EF267A46B500DD1FF3 /* HomyWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,6 +318,7 @@
 				4B21AB6A2606C94C00462202 /* AchievementTypes.swift */,
 				4B4FD2CC260A60BB007BF966 /* TimeTableHandler.swift */,
 				4B4FD2D1260A6502007BF966 /* TimeTableTypes.swift */,
+				4B56A0D02728A7AF00B9CADB /* PreInstallSubjects.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -274,6 +326,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4B0243EE267A46B500DD1FF3 /* HomyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B024400267A46B700DD1FF3 /* Build configuration list for PBXNativeTarget "HomyWidgetExtension" */;
+			buildPhases = (
+				4B0243EB267A46B500DD1FF3 /* Sources */,
+				4B0243EC267A46B500DD1FF3 /* Frameworks */,
+				4B0243ED267A46B500DD1FF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomyWidgetExtension;
+			productName = HomyWidgetExtension;
+			productReference = 4B0243EF267A46B500DD1FF3 /* HomyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4B6508EA25AF31A400FEA20A /* HomeWorkPlanner (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B6508FF25AF31A400FEA20A /* Build configuration list for PBXNativeTarget "HomeWorkPlanner (iOS)" */;
@@ -286,6 +355,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4B0243FC267A46B700DD1FF3 /* PBXTargetDependency */,
 			);
 			name = "HomeWorkPlanner (iOS)";
 			productName = "HomeWorkPlanner (iOS)";
@@ -315,9 +385,12 @@
 		4B6508DF25AF31A200FEA20A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					4B0243EE267A46B500DD1FF3 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					4B6508EA25AF31A400FEA20A = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -341,11 +414,20 @@
 			targets = (
 				4B6508EA25AF31A400FEA20A /* HomeWorkPlanner (iOS) */,
 				4B6508F225AF31A400FEA20A /* HomeWorkPlanner (macOS) */,
+				4B0243EE267A46B500DD1FF3 /* HomyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4B0243ED267A46B500DD1FF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0243F7267A46B700DD1FF3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4B6508E925AF31A400FEA20A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +447,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4B0243EB267A46B500DD1FF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0243F4267A46B500DD1FF3 /* HomyWidget.swift in Sources */,
+				4B0243F9267A46B700DD1FF3 /* HomyWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4B6508E725AF31A400FEA20A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,11 +466,13 @@
 				4B1AC3AA266EBF7700E15432 /* ShadowCardView.swift in Sources */,
 				4B21AB722606CB6E00462202 /* AchievementsListView.swift in Sources */,
 				4B649F2E26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */,
+				4B1AC3AD266FD3CB00E15432 /* Sizes.swift in Sources */,
 				4B4FD2D2260A6502007BF966 /* TimeTableTypes.swift in Sources */,
 				4B649F3826013B7500CE1F61 /* FinishWorkDetailView.swift in Sources */,
 				4B3D1B3425FE993300B48135 /* InformationsView.swift in Sources */,
 				4B0E522D25FD9546009D63CD /* Data.xcdatamodeld in Sources */,
 				4BEDFB5E25AF6D8100FABA36 /* AddHomeWorkView.swift in Sources */,
+				4B0243FA267A46B700DD1FF3 /* HomyWidget.intentdefinition in Sources */,
 				4B4FD2C8260A6039007BF966 /* TimeTableView.swift in Sources */,
 				4B4FD2DC260A8FF0007BF966 /* AddTimeTableView.swift in Sources */,
 				4BA39BFC2606C47E00CA41A4 /* AchievementsHandler.swift in Sources */,
@@ -387,6 +480,7 @@
 				4BFE4AE725AF3797009E0126 /* WorkDetailView.swift in Sources */,
 				4B8CFDD725F17C9700F615E1 /* ProfileView.swift in Sources */,
 				4B6508F725AF31A400FEA20A /* HomeWorkPlannerApp.swift in Sources */,
+				4B56A0D12728A7AF00B9CADB /* PreInstallSubjects.swift in Sources */,
 				4B8A6D1825FD84F900079852 /* BioMetricType.swift in Sources */,
 				4B3B47F425E1AAB100741B6B /* TabItemView.swift in Sources */,
 				4B3B480625E1B4EB00741B6B /* CardView.swift in Sources */,
@@ -425,13 +519,69 @@
 				4B649F2F26012AAA00CE1F61 /* FinishHomeWorkView.swift in Sources */,
 				4B1AC3AB266EBF7700E15432 /* ShadowCardView.swift in Sources */,
 				4B8CFDD825F17C9700F615E1 /* ProfileView.swift in Sources */,
+				4B1AC3AE266FD3CB00E15432 /* Sizes.swift in Sources */,
 				4B0E523425FE3E43009D63CD /* SubjectListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4B0243FC267A46B700DD1FF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B0243EE267A46B500DD1FF3 /* HomyWidgetExtension */;
+			targetProxy = 4B0243FB267A46B700DD1FF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4B0243FE267A46B700DD1FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQA322H87A;
+				INFOPLIST_FILE = HomyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner.HomyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B0243FF267A46B700DD1FF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQA322H87A;
+				INFOPLIST_FILE = HomyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.marvhuelsmann.HomeWorkPlanner.HomyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		4B6508FD25AF31A400FEA20A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -546,9 +696,11 @@
 		4B65090025AF31A400FEA20A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = TQA322H87A;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -568,9 +720,11 @@
 		4B65090125AF31A400FEA20A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = TQA322H87A;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -641,6 +795,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4B024400267A46B700DD1FF3 /* Build configuration list for PBXNativeTarget "HomyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B0243FE267A46B700DD1FF3 /* Debug */,
+				4B0243FF267A46B700DD1FF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4B6508E225AF31A200FEA20A /* Build configuration list for PBXProject "HomeWorkPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

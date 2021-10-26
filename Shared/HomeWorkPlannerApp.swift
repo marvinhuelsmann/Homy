@@ -17,5 +17,6 @@ struct HomeWorkPlannerApp: App {
             TabItemView()
                 .environment(\.managedObjectContext, persistenceContainer.container.viewContext)
         }
+    
     }
 }

@@ -27,6 +27,22 @@ struct SubjectListView: View {
                 List {
                     if self.subjects.isEmpty {
                         Text("Keine Fächer eingetragen!")
+                        
+                        HStack(alignment: .center) {
+                            Spacer()
+                            Button("Template Fächer hinzufügen") {
+                                makeTemplateSubjects()
+                            }
+                            .foregroundColor(.black)
+                            Spacer()
+                        }
+                        .listRowInsets(EdgeInsets())
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(5)
+                        .shadow(radius: 4)
+                        .padding()
+                        
                     }
                     
                     ForEach(subjects) { subject in
@@ -118,6 +134,21 @@ struct SubjectListView: View {
             let error = error as NSError
             fatalError("Unresolved Error: \(error)")
         }
+    }
+    
+    /// Add a new Subject with the data from the form
+    func makeTemplateSubjects() {
+        
+    
+        
+        for templateSubject in PreInstallSubjects.allCases {
+            let newSubject = SubjectsData(context: viewContext)
+            newSubject.name = templateSubject.rawValue
+            
+            saveContext()
+        }
+    
+        
     }
     
     /// To delete one HomeWork

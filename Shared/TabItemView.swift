@@ -48,7 +48,6 @@ struct TabItemView: View {
         }).onAppear(perform: {
             SettingsView().firstAppOpen = true
         })
-        
     }
     
     /// To authenticate the user with the app

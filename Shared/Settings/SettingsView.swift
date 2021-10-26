@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct SettingsView: View {
+    
+    @Environment(\.colorScheme) var colorSheme
     
     /// AppSettings
     @AppStorage("secureOnLogin") var requiredPasswordIdOnLogin = false
@@ -17,7 +20,6 @@ struct SettingsView: View {
     @AppStorage("noticeWork") var noticeWork = true
     
     var body: some View {
-        
         VStack {
             Form {
                 
@@ -33,17 +35,16 @@ struct SettingsView: View {
                     Toggle("Online Aufgaben", isOn: $onlineWork)
                 }
                 
-                
                 Section(footer: Text("Wenn diese Option aktiviert ist, musst du eine Notiz in deinen Aufgaben hinterlegen.")) {
                     Toggle("Aufgaben Notizen", isOn: $noticeWork)
                 }
             }
         }
     }
-}
-
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
+    
+    struct SettingsView_Previews: PreviewProvider {
+        static var previews: some View {
+            SettingsView()
+        }
     }
 }

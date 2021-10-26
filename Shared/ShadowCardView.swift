@@ -11,28 +11,32 @@ struct ShadowCardView: View {
     var title: String
     var bodyText: String
     var destination: AnyView
+    var backgroundColor: UIBlurEffect
+    var foregroundColor: Color
+    var size: Sizes
     
     var body: some View {
         NavigationLink(
             destination: destination,
             label: {
                 ZStack {
-                    VisualEffectView(effect: UIBlurEffect(style: .systemMaterialDark))
-                        .blur(radius: 10)
-                        .frame(width: 400, height: 200, alignment: .center)
+                    VisualEffectView(effect: backgroundColor)
+                        .blur(radius: 7)
+                        .frame(width: 400, height: getSpecificSizeHeight(size: size) , alignment: .center)
                     
                     VStack {
                         Text(title)
                             .font(.largeTitle)
                             .bold()
-                            .foregroundColor(.white)
+                            .foregroundColor(foregroundColor)
                         
                         Text(bodyText)
-                            .foregroundColor(.white)
+                            .foregroundColor(foregroundColor)
                             .font(.callout)
                             .fontWeight(.medium)
                         
                     }
+                    .padding()
                 }
                 .padding()
                 .cornerRadius(1)
@@ -49,6 +53,6 @@ struct VisualEffectView: UIViewRepresentable {
 
 struct ShadowCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ShadowCardView(title: "Test", bodyText: "Lorem ipsum, text only for debug", destination: AnyView(TabItemView()))
+        ShadowCardView(title: "Test", bodyText: "Lorem ipsum, text only for debug", destination: AnyView(TabItemView()), backgroundColor: UIBlurEffect(style: .dark), foregroundColor: .white, size: Sizes.large)
     }
 }

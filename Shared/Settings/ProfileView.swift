@@ -11,14 +11,11 @@ struct ProfileView: View {
     
     var body: some View {
         NavigationView {
-   
+            
             VStack {
-                ShadowCardView(title: "Fertige Aufgaben", bodyText: "Hier siehst du alle Aufgaben die du als erledigt markiert hast oder gelöscht hast.", destination: AnyView(FinishHomeWorkView()))
+                ShadowCardView(title: "Fertige Aufgaben", bodyText: "Hier siehst du alle Aufgaben die du als erledigt markiert hast oder gelöscht hast.", destination: AnyView(FinishHomeWorkView()), backgroundColor: UIBlurEffect(style: .systemMaterialDark), foregroundColor: .white, size: .medium)
                 
-                CardView(color: Color.blue, headLine: "Erfolge", bodyText: "Sehe dir deine Homy Erfolge an und lass dich feiern und bejubeln.", destination: AnyView(AchievementsListView()))
-                    .padding(.trailing, 15)
-                    .padding(.leading, 15)
-                    .padding(.top, 10)
+                ShadowCardView(title: "Erfolge", bodyText: "Sehe dir deine Homy Erfolge an und lass dich feiern und bejubeln.", destination: AnyView(AchievementsListView()), backgroundColor: UIBlurEffect(style: .systemMaterialLight), foregroundColor: .black, size: Sizes.small)
                 
                 Spacer()
             }

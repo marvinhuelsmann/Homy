@@ -8,7 +8,7 @@
 import Foundation
 import LocalAuthentication
 
-enum BiometricType{
+enum BiometricType {
     case touch
     case face
     case none

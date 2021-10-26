@@ -115,7 +115,7 @@ struct AddHomeWorkView: View {
                 if !fillInAll {
                     HStack {
                         Spacer()
-                        Text("Es wurden nicht alle relevanten benötigten Felder ausgefüllt!")
+                        Text("Es wurden nicht alle relevanten Felder ausgefüllt!")
                             .bold()
                             .multilineTextAlignment(.center)
                         Spacer()
