@@ -28,7 +28,7 @@ struct WeekDaysView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Alle löschen") {
                             self.showAlert = true
-                        }
+                        }.foregroundColor(.red)
                     }
             })
             .alert(isPresented: $showAlert) {

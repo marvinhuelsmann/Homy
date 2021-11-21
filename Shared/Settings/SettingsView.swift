@@ -39,7 +39,7 @@ struct SettingsView: View {
                     Toggle("Aufgaben Notizen", isOn: $noticeWork)
                 }
             }
-        }
+        }.navigationBarTitle("Einstellungen", displayMode: .inline)
     }
     
     struct SettingsView_Previews: PreviewProvider {

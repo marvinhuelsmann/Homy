@@ -75,10 +75,16 @@ struct SubjectListView: View {
                     ToolbarItem(placement: .navigationBarLeading) {
                         if !self.subjects.isEmpty {
                             VStack {
-                                Button(isEditing ? "Fertig" : "Bearbeiten") {
+                                Button(action: {
                                     self.isEditing.toggle()
-                                }
-                            }
+                                }, label: {
+                                    VStack {
+                                        Text(isEditing ? "Fertig" : "Bearbeiten")
+                                            .foregroundColor(.red)
+                                            .bold()
+                                    }
+                                })
+                            }.foregroundColor(.red)
                         }
                     }
                 })

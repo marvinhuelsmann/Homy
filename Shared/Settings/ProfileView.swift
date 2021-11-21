@@ -17,6 +17,7 @@ struct ProfileView: View {
                 
                 ShadowCardView(title: "Erfolge", bodyText: "Sehe dir deine Homy Erfolge an und lass dich feiern und bejubeln.", destination: AnyView(AchievementsListView()), backgroundColor: UIBlurEffect(style: .systemMaterialLight), foregroundColor: .black, size: Sizes.small)
                 
+            
                 Spacer()
             }
             

@@ -37,7 +37,7 @@ struct WorkDetailView: View {
                         .multilineTextAlignment(.center)
                     
                     if homework.notify != "" || homework.notify != nil {
-                    Text("Du wirst \(getNotification()) vorher benachrichtigt!")
+                    Text("Du wirst \(getNotification()) Minuten vorher benachrichtigt!")
                         .foregroundColor(.secondary)
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
